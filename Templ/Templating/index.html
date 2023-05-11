@@ -1,0 +1,2892 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.8" name="generator"/>
+<title>Hugo模板入门介绍 - Hugo 中文文档集</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-hugo-templating-hugo">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hugo 中文文档集" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hugo 中文文档集
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Hugo模板入门介绍
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hugo 中文文档集" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Hugo 中文文档集
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        首页
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../AboutHugo/">关于Hugo</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="关于Hugo" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          关于Hugo
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugosSecurityModel/">
+        Hugo 的安全模型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoAndGDPR/">
+        Hugo and GDPR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/WhatIsHugo/">
+        什么是 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoFeatures/">
+        Hugo特性
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/TheBenefitsOfStatic/">
+        静态网站生成器的好处
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/License/">
+        License
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Installation/">安装</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="安装" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          安装
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/MacOS/">
+        macOS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Linux/">
+        Linux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Windows/">
+        Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/BSD/">
+        BSD
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../GettingStarted/">开始入门</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="开始入门" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          开始入门
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/QuickStart/">
+        快速入门
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/BasicUsage/">
+        基础用法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/DirectoryStructure/">
+        目录结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/Configuration/">
+        配置 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ConfigurationMarkup/">
+        配置Markup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ExternalLearningResources/">
+        外部学习资源
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoModules/">Hugo 模块</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo 模块" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Hugo 模块
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ConfigureModules/">
+        配置模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/UseHugoModules/">
+        使用 Hugo 模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ThemeComponents/">
+        主题组件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ContentManagement/">内容管理</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="内容管理" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          内容管理
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Organization/">
+        内容组织
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/PageBundles/">
+        页面Bundles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ContentFormats/">
+        内容格式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Diagrams/">
+        图表
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/FrontMatter/">
+        前置元数据
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/BuildOptions/">
+        构建选项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/PageResources/">
+        页面资源
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ImageProcessing/">
+        图像处理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Shortcodes/">
+        简码
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/RelatedContent/">
+        相关内容
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Sections/">
+        内容章节
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ContentTypes/">
+        内容类型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Archetypes/">
+        原型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Taxonomies/">
+        分类法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Summaries/">
+        内容摘要
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/LinksAndCrossReferences/">
+        链接和交叉引用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/URLManagement/">
+        URL管理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Menus/">
+        菜单
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/StaticFiles/">
+        静态文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/TableOfContents/">
+        目录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Comments/">
+        评论
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Multilingual/">
+        多语言模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/SyntaxHighlighting/">
+        语法高亮
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">模板</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="模板" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          模板
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Hugo模板入门介绍
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Hugo模板入门介绍
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    基本语法
+  </a>
+<nav aria-label="基本语法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    访问预定义变量
+  </a>
+<nav aria-label="访问预定义变量" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    通过点符号访问方法和字段
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    括号可以用来分组项
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    单个语句可以分成多行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    原始字符串字面值可以包含换行符
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    变量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    函数
+  </a>
+<nav aria-label="函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    示例1：添加数字
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    示例2：比较数字
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#includes">
+    Includes
+  </a>
+<nav aria-label="Includes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partial">
+    Partial
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    模板
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    逻辑
+  </a>
+<nav aria-label="逻辑" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    迭代
+  </a>
+<nav aria-label="迭代" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_1">
+    示例1：使用上下文(.)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+    示例2：为数组元素的值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    示例3：为数组元素的索引和值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4map">
+    示例4：为map元素的键和值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5map">
+    示例5：针对空map、数组或切片的条件语句
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    条件语句
+  </a>
+<nav aria-label="条件语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1with">
+    示例1：with
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2withelse">
+    示例2：with..else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3if">
+    示例3：if
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4ifelse">
+    示例4：if..else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-if-else-if-else">
+    示例5： if .. else if .. else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-and-or">
+    示例6： and &amp; or
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    管道
+  </a>
+<nav aria-label="管道" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-shuffle">
+    示例1： shuffle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-index">
+    示例2： index
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-issetor">
+    示例3： 带有isset的or
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    上下文（也称"点"）
+  </a>
+<nav aria-label="上下文（也称" class="md-nav" 点"）"="">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_2">
+    1.定义一个独立于上下文的变量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_2">
+    2.使用$.访问全局上下文
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    空格
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    注释
+  </a>
+<nav aria-label="注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go">
+    Go模板注释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#html">
+    HTML 注释
+  </a>
+<nav aria-label="HTML 注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-html">
+    包含 Go 模板的 HTML 注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hugo">
+    Hugo参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#page">
+    使用内容（page）参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    使用站点配置参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    示例：显示未来事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TemplateLookupOrder/">
+        Hugo 的查找顺序
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CustomOutputFormats/">
+        自定义输出格式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../BaseTemplatesAndBlocks/">
+        基础模板和块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RenderHooks/">
+        Markdown渲染钩子
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ListTemplates/">
+        列表模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HomepageTemplate/">
+        主页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SectionTemplates/">
+        章节页面模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TaxonomyTemplates/">
+        分类模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SinglePageTemplates/">
+        单页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ContentViewTemplates/">
+        内容视图模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DataTemplates/">
+        数据模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PartialTemplates/">
+        局部模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ShortcodeTemplates/">
+        简码模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LocalFileTemplates/">
+        本地文件模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../404Page/">
+        404页面
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MenuTemplates/">
+        菜单模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Pagination/">
+        分页
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RSSTemplates/">
+        RSS模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SitemapTemplates/">
+        Sitemap模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Robots_txt/">
+        Robots.txt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InternalTemplates/">
+        内置模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TemplateDebugging/">
+        模板调试
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          函数
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="函数" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          函数
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FunctionsQuickReference/">
+        Functions Quick Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_AddDate/">
+        .AddDate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Format/">
+        .Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Get/">
+        .Get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_GetPage/">
+        .GetPage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_HasMenuCurrent/">
+        .HasMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_IsMenuCurrent/">
+        .IsMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Param/">
+        .Param
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Render/">
+        .Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_RenderString/">
+        .RenderString
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Scratch/">
+        .Scratch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Store/">
+        .Store
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Unix/">
+        .Unix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsLangURL/">
+        absLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsURL/">
+        absURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/After/">
+        after
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Anchorize/">
+        anchorize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Append/">
+        append
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Apply/">
+        apply
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Base64/">
+        base64
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Chomp/">
+        chomp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Complement/">
+        complement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Cond/">
+        cond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countrunes/">
+        countrunes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countwords/">
+        countwords
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Crypto_FNV32a/">
+        crypto.FNV32a
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Default/">
+        default
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Delimit/">
+        delimit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Dict/">
+        dict
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Duration/">
+        duration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/EchoParam/">
+        echoParam
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Emojify/">
+        emojify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Eq/">
+        eq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ErrorfAndWarnf/">
+        errorf and warnf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FileExists/">
+        fileExists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRE/">
+        findRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRESubmatch/">
+        findRESubmatch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/First/">
+        first
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Float/">
+        float
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ge/">
+        ge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Getenv/">
+        getenv
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Group/">
+        group
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Gt/">
+        gt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Highlight/">
+        highlight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hmac/">
+        hmac
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlEscape/">
+        htmlEscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlUnescape/">
+        htmlUnescape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Humanize/">
+        humanize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/I18n/">
+        i18n
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ImageFilters/">
+        Image Filters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/In/">
+        in
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Index/">
+        index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Int/">
+        int
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Intersect/">
+        intersect
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Isset/">
+        isset
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Jsonify/">
+        jsonify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang/">
+        lang
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang_Merge/">
+        lang.Merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Last/">
+        last
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Le/">
+        le
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Len/">
+        len
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lower/">
+        lower
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lt/">
+        lt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Markdownify/">
+        markdownify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Math/">
+        Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Md5/">
+        md5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Merge/">
+        merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ne/">
+        ne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Now/">
+        now
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Os_Stat/">
+        os.Stat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/PartialCached/">
+        partialCached
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Base/">
+        path.Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_BaseName/">
+        path.BaseName
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Clean/">
+        path.Clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Dir/">
+        path.Dir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Ext/">
+        path.Ext
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Join/">
+        path.Join
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Split/">
+        path.Split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Plainify/">
+        plainify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Pluralize/">
+        pluralize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Print/">
+        print
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Printf/">
+        printf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Println/">
+        println
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Querify/">
+        querify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Range/">
+        range
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadDir/">
+        readDir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadFile/">
+        readFile
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ref/">
+        ref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsMap/">
+        reflect.IsMap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsSlice/">
+        reflect.IsSlice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelLangURL/">
+        relLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Relref/">
+        relref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelURL/">
+        relURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Replace/">
+        replace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReplaceRE/">
+        replaceRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeCSS/">
+        safeCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTML/">
+        safeHTML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTMLAttr/">
+        safeHTMLAttr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeJS/">
+        safeJS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeURL/">
+        safeURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Seq/">
+        seq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sha/">
+        sha
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Shuffle/">
+        shuffle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Singularize/">
+        singularize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Site/">
+        site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slice/">
+        slice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slicestr/">
+        slicestr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sort/">
+        sort
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Split/">
+        split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/String/">
+        string
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Contains/">
+        strings.Contains
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_ContainsAny/">
+        strings.ContainsAny
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Count/">
+        strings.Count
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_FirstUpper/">
+        strings.FirstUpper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasPrefix/">
+        strings.HasPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasSuffix/">
+        strings.HasSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Repeat/">
+        strings.Repeat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_RuneCount/">
+        strings.RuneCount
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimLeft/">
+        strings.TrimLeft
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimPrefix/">
+        strings.TrimPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimRight/">
+        strings.TrimRight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimSuffix/">
+        strings.TrimSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Substr/">
+        substr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Symdiff/">
+        symdiff
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Templates_Exists/">
+        templates.Exists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time/">
+        time
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_Format/">
+        time.Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_ParseDuration/">
+        time.ParseDuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Title/">
+        title
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Transform_Unmarshal/">
+        transform.Unmarshal
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Trim/">
+        trim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Truncate/">
+        truncate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Union/">
+        union
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Uniq/">
+        uniq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Upper/">
+        upper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlize/">
+        urlize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlquery/">
+        urlquery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urls_Parse/">
+        urls.Parse
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Where/">
+        where
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/With/">
+        with
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Variables/">变量</a>
+<label for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="变量" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          变量
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SiteVariables/">
+        站点变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PageVariables/">
+        页面变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/ShortcodeVariables/">
+        简码变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PagesMethods/">
+        页面方法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/TaxonomyVariables/">
+        分类变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/FileVariables/">
+        文件变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/MenuVariables/">
+        菜单变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/GitVariables/">
+        Git 信息变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SitemapVariables/">
+        Sitemap变量
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoPipes/">Hugo Pipes</a>
+<label for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo Pipes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Hugo Pipes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/HugoPipes/">
+        Hugo Pipes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/TranspileSassToSCSS/">
+        Transpile Sass to SCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostProcess/">
+        PostProcess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostCSS/">
+        PostCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/JavaScriptBuilding/">
+        JavaScript Building
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/Babel/">
+        Babel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/AssetMinification/">
+        Asset minification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ConcatenatingAssets/">
+        Concatenating assets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/FingerprintingAndSRI/">
+        Fingerprinting and SRI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromTemplate/">
+        Resource from Template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromString/">
+        Resource from String
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletion/">
+        hugo completion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionBash/">
+        hugo completion bash
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionFish/">
+        hugo completion fish
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionPowershell/">
+        hugo completion powershell
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionZsh/">
+        hugo completion zsh
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfig/">
+        hugo config
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfigMounts/">
+        hugo config mounts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvert/">
+        hugo convert
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToJSON/">
+        hugo convert toJSON
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToTOML/">
+        hugo convert toTOML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToYAML/">
+        hugo convert toYAML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoDeploy/">
+        hugo deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoEnv/">
+        hugo env
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGen/">
+        hugo gen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenChromastyles/">
+        hugo gen chromastyles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenDoc/">
+        hugo gen doc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenMan/">
+        hugo gen man
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImport/">
+        hugo import
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImportJekyll/">
+        hugo import jekyll
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoList/">
+        hugo list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListAll/">
+        hugo list all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListDrafts/">
+        hugo list drafts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListExpired/">
+        hugo list expired
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListFuture/">
+        hugo list future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoMod/">
+        hugo mod
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModClean/">
+        hugo mod clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGet/">
+        hugo mod get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGraph/">
+        hugo mod graph
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModInit/">
+        hugo mod init
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpm/">
+        hugo mod npm
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpmPack/">
+        hugo mod npm pack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModTidy/">
+        hugo mod tidy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVendor/">
+        hugo mod vendor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVerify/">
+        hugo mod verify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNew/">
+        hugo new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewSite/">
+        hugo new site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewTheme/">
+        hugo new theme
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoServer/">
+        hugo server
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoVersion/">
+        hugo version
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Troubleshooting" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/Troubleshoot.md">
+        Troubleshoot
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/FAQ/">
+        FAQ
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/BuildPerformance/">
+        Build Performance
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Tools/">工具</a>
+<label for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="工具" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Migrations/">
+        Migrations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/StarterKits/">
+        Starter Kits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Frontends/">
+        Frontends
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/EditorPlug-ins/">
+        Editor Plug-ins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Search/">
+        Search
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/OtherProjects/">
+        Other Projects
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HostingDeployment/">Hosting &amp; Deployment</a>
+<label for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hosting &amp; Deployment" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          Hosting &amp; Deployment
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HugoDeploy/">
+        Hugo Deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOn21YunBox/">
+        Host on 21YunBox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAWSAmplify/">
+        Host on AWS Amplify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAzureStaticWebApps/">
+        Host on Azure Static Web Apps
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnNetlify/">
+        Host on Netlify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnRender/">
+        Host on Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnFirebase/">
+        Host on Firebase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitHub/">
+        Host on GitHub
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitLab/">
+        Host on GitLab
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnKeyCDN/">
+        Host on KeyCDN
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnCloudflarePages/">
+        Host on Cloudflare Pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRsync/">
+        Deployment with Rsync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRclone/">
+        Deployment with Rclone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostingOnAzureStaticWebApps/">
+        Hosting on Azure Static Web Apps
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15">
+          贡献
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="贡献" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          贡献
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/ContributeToHugo/">
+        Contribute to Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Development/">
+        Development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Themes/">
+        Themes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    基本语法
+  </a>
+<nav aria-label="基本语法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    访问预定义变量
+  </a>
+<nav aria-label="访问预定义变量" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    通过点符号访问方法和字段
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    括号可以用来分组项
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    单个语句可以分成多行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    原始字符串字面值可以包含换行符
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    变量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    函数
+  </a>
+<nav aria-label="函数" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    示例1：添加数字
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    示例2：比较数字
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#includes">
+    Includes
+  </a>
+<nav aria-label="Includes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partial">
+    Partial
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    模板
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    逻辑
+  </a>
+<nav aria-label="逻辑" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    迭代
+  </a>
+<nav aria-label="迭代" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_1">
+    示例1：使用上下文(.)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_1">
+    示例2：为数组元素的值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    示例3：为数组元素的索引和值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4map">
+    示例4：为map元素的键和值声明变量名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5map">
+    示例5：针对空map、数组或切片的条件语句
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    条件语句
+  </a>
+<nav aria-label="条件语句" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1with">
+    示例1：with
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2withelse">
+    示例2：with..else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3if">
+    示例3：if
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4ifelse">
+    示例4：if..else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-if-else-if-else">
+    示例5： if .. else if .. else
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-and-or">
+    示例6： and &amp; or
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    管道
+  </a>
+<nav aria-label="管道" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-shuffle">
+    示例1： shuffle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-index">
+    示例2： index
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-issetor">
+    示例3： 带有isset的or
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    上下文（也称"点"）
+  </a>
+<nav aria-label="上下文（也称" class="md-nav" 点"）"="">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1_2">
+    1.定义一个独立于上下文的变量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2_2">
+    2.使用$.访问全局上下文
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    空格
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    注释
+  </a>
+<nav aria-label="注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go">
+    Go模板注释
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#html">
+    HTML 注释
+  </a>
+<nav aria-label="HTML 注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#go-html">
+    包含 Go 模板的 HTML 注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hugo">
+    Hugo参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#page">
+    使用内容（page）参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    使用站点配置参数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    示例：显示未来事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-hugo-templating-hugo">Introduction to Hugo Templating - Hugo模板入门介绍<a class="headerlink" href="#introduction-to-hugo-templating-hugo" title="Permanent link">⚓︎</a></h1>
+<p>https://gohugo.io/templates/introduction/</p>
+<p>​   Hugo 使用 Go 的 <code>html/template</code> 和 <code>text/template</code> 库作为模板的基础。 </p>
+<p>​   以下仅为 Go 模板的入门指南。若想深入了解 Go 模板，请查看官方 <a href="https://golang.org/pkg/text/template/">Go 文档</a>。</p>
+<p>​   Go 模板提供了一种极其简单的模板语言，坚信只有最基本的逻辑应该放在模板或视图层中。</p>
+<h2 id="_1">基本语法<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p>​   Go 模板是 HTML 文件，并加入了<a href="https://gohugo.io/variables">变量</a>和<a href="https://gohugo.io/functions">函数</a>。Go 模板的变量和函数可以在 <code>{{ }}</code>中进行访问。</p>
+<h3 id="_2">访问预定义变量<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
+<p>​   预定义变量可以是当前作用域中已经存在的变量（如下面<a href="https://gohugo.io/templates/introduction/#variables">变量章节</a>的<code>.Title</code>示例），也可以是自定义变量（如该章节中的<code>$address</code>示例）。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>{{ .Title }}
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>{{ $address }}
+</code></pre></div>
+<p>​   函数的参数使用空格分隔。通常的语法如下：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>{{ FUNCTION ARG1 ARG2 .. }}
+</code></pre></div>
+<p>​   下面的示例使用<code>1</code>和<code>2</code>作为<code>add</code>函数的输入：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{{ add 1 2 }}
+</code></pre></div>
+<h4 id="_3">通过点符号访问方法和字段<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h4>
+<p>​   访问在内容前置元数据中定义的 Page 参数中的 <code>bar</code>。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>{{ .Params.bar }}
+</code></pre></div>
+<h4 id="_4">括号可以用来分组项<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{{ if or (isset .Params "alt") (isset .Params "caption") }} Caption {{ end }}
+</code></pre></div>
+<h4 id="_5">单个语句可以分成多行<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>{{ if or
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>  (isset .Params "alt")
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>  (isset .Params "caption")
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>}}
+</code></pre></div>
+<h4 id="_6">原始字符串字面值可以包含换行符<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>{{ $msg := `Line one.
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>Line two.` }}
+</code></pre></div>
+<h2 id="_7">变量<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h2>
+<p>​   每个Go模板都有一个数据对象。在Hugo中，每个模板都传递了一个<code>Page</code>。在下面的示例中，<code>.Title</code>是<a href="https://gohugo.io/variables/page"><code>Page</code>变量</a>中可访问的元素之一。</p>
+<p>​   由于Page是模板的默认作用域，因此可以通过点前缀(<code>.Title</code>)轻松访问当前作用域(<code>.</code> —— "the <strong>dot</strong>")中的<code>Title</code>元素：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>&lt;title&gt;{{ .Title }}&lt;/title&gt;
+</code></pre></div>
+<p>​   值也可以存储在自定义变量中，并在之后被引用：</p>
+<p>​   自定义变量需要以<code>$</code>为前缀。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>{{ $address := "123 Main St." }}
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>{{ $address }}
+</code></pre></div>
+<p>​   使用<code>=</code>运算符可以重新定义变量。下面的示例在主页上打印"Var is Hugo Home"，在其他所有页面上打印"Var is Hugo Page"：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>{{ $var := "Hugo Page" }}
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>{{ if .IsHome }}
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>    {{ $var = "Hugo Home" }}
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>{{ end }}
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>Var is {{ $var }}
+</code></pre></div>
+<h2 id="_8">函数<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h2>
+<p>​   Go模板仅提供了一些基本函数，但还提供了一种机制，使应用程序能够扩展原始函数集。</p>
+<p>​   <a href="https://gohugo.io/functions">Hugo模板函数</a>提供了特定于构建站点的附加功能。通过使用函数名和由空格分隔的所需参数来调用函数。如果没有重新编译Hugo，则无法添加模板函数。</p>
+<h3 id="1">示例1：添加数字<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>{{ add 1 2 }}
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>&lt;!-- prints 3 --&gt;
+</code></pre></div>
+<h3 id="2">示例2：比较数字<a class="headerlink" href="#2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>{{ lt 1 2 }}
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>&lt;!-- prints true (i.e., since 1 is less than 2) --&gt;
+</code></pre></div>
+<p>​   请注意，这两个示例都使用了Go模板的<a href="https://gohugo.io/functions/math">math</a>函数。</p>
+<p>​   在<a href="https://golang.org/pkg/text/template/#hdr-Functions">Go模板文档</a>中，有比Hugo文档中列出的更多的布尔运算符。</p>
+<h2 id="includes">Includes<a class="headerlink" href="#includes" title="Permanent link">⚓︎</a></h2>
+<p>​   在包含（Include）另一个模板时，您需要传递它需要访问的数据。</p>
+<p>​   为了传递当前上下文，请记住包含一个尾随点。</p>
+<p>​   模板位置始终从Hugo的<code>layouts/</code>目录开始。</p>
+<h3 id="partial">Partial<a class="headerlink" href="#partial" title="Permanent link">⚓︎</a></h3>
+<p>​   <code>partial</code>函数用于使用语法<code>{{ partial "&lt;PATH&gt;/&lt;PARTIAL&gt;.&lt;EXTENSION&gt;" . }}</code>包含部分（partial）模板。</p>
+<p>​   包含<code>layouts/partials/header.html</code>部分（partial）模板的示例：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>{{ partial "header.html" . }}
+</code></pre></div>
+<h3 id="_9">模板<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
+<p>​   在早期版本的Hugo中，<code>template</code>函数用于包含部分（partial）模板。现在，它仅用于调用<a href="https://gohugo.io/templates/internal">内部模板</a>。语法为<code>{{ template "_internal/&lt;TEMPLATE&gt;.&lt;EXTENSION&gt;" . }}</code>。</p>
+<p>​   可以在<a href="https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates">这里</a>找到可用的内部模板。</p>
+<p>​   包含内部<code>opengraph.html</code>模板的示例：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>{{ template "_internal/opengraph.html" . }}
+</code></pre></div>
+<h2 id="_10">逻辑<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h2>
+<p>​   Go模板提供了最基本的迭代和条件逻辑。</p>
+<h3 id="_11">迭代<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
+<p>​   Go模板大量使用<code>range</code>来迭代map、array或slice。以下是如何使用<code>range</code>的不同示例。</p>
+<h4 id="1_1">示例1：使用上下文(<code>.</code>)<a class="headerlink" href="#1_1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>{{ range $array }}
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>    {{ . }} &lt;!-- The . represents an element in $array --&gt;
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="2_1">示例2：为数组元素的值声明变量名<a class="headerlink" href="#2_1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>{{ range $elem_val := $array }}
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>    {{ $elem_val }}
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="3">示例3：为数组元素的索引和值声明变量名<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h4>
+<p>​   对于数组或切片，第一个声明的变量将映射到每个元素的索引。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>{{ range $elem_index, $elem_val := $array }}
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>   {{ $elem_index }} -- {{ $elem_val }}
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="4map">示例4：为map元素的键和值声明变量名<a class="headerlink" href="#4map" title="Permanent link">⚓︎</a></h4>
+<p>​   对于map，第一个声明的变量将映射到每个map元素的键。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>{{ range $elem_key, $elem_val := $map }}
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>   {{ $elem_key }} -- {{ $elem_val }}
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="5map">示例5：针对空map、数组或切片的条件语句<a class="headerlink" href="#5map" title="Permanent link">⚓︎</a></h4>
+<p>​   如果传递给<code>range</code>的map、数组或切片长度为零，则将执行else语句。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>{{ range $array }}
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>    {{ . }}
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>{{ else }}
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a>    &lt;!-- This is only evaluated if $array is empty --&gt;
+<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a>{{ end }}
+</code></pre></div>
+<h3 id="_12">条件语句<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
+<p>​   <code>if</code>、<code>else</code>、<code>with</code>、<code>or</code>、<code>and</code>和<code>not</code>提供了处理Go模板中条件逻辑的框架。与<code>range</code>一样，<code>if</code>和<code>with</code>语句也是用<code>{{ end }}</code>关闭的。</p>
+<p>​   Go 模板将以下值视为<code>false</code>：</p>
+<ul>
+<li><code>false</code> (boolean)</li>
+<li><code>0</code> (integer)</li>
+<li>任何长度为零的数组、切片、映射或字符串 </li>
+</ul>
+<h4 id="1with">示例1：<code>with</code><a class="headerlink" href="#1with" title="Permanent link">⚓︎</a></h4>
+<p>​   通常使用<code>with</code>编写"if something exists, do this"这样的语句。</p>
+<p>​   <code>with</code>会在其作用域内重新绑定上下文(<code>.</code>)（就像在<code>range</code>中一样）。</p>
+<p>​   如果变量不存在，或者如果它按上面所述计算为"false"，则它会跳过该块。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>{{ with .Params.title }}
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>    &lt;h4&gt;{{ . }}&lt;/h4&gt;
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="2withelse">示例2：<code>with</code>..<code>else</code><a class="headerlink" href="#2withelse" title="Permanent link">⚓︎</a></h4>
+<p>​   下面的代码片段如果设置了"description"前置元数据的值，则使用它，否则使用默认的<code>.Summary</code><a href="https://gohugo.io/variables/page">页面变量</a>：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>{{ with .Param "description" }}
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>    {{ . }}
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>{{ else }}
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>    {{ .Summary }}
+<a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>{{ end }}
+</code></pre></div>
+<p>​   参见<a href="https://gohugo.io/functions/param"><code>.Param</code>函数</a>。</p>
+<h4 id="3if">示例3：<code>if</code><a class="headerlink" href="#3if" title="Permanent link">⚓︎</a></h4>
+<p>​   编写<code>with</code>的另一种替代（更冗长）方法是使用<code>if</code>。在这里，<code>.</code>不会重新绑定。</p>
+<p>​   下面的示例是使用<code>if</code>重写的"示例1"：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>{{ if isset .Params "title" }}
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>    &lt;h4&gt;{{ index .Params "title" }}&lt;/h4&gt;
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>{{ end }}
+</code></pre></div>
+<h4 id="4ifelse">示例4：<code>if</code>..<code>else</code><a class="headerlink" href="#4ifelse" title="Permanent link">⚓︎</a></h4>
+<p>​   下面的示例是使用<code>if</code> .. <code>else</code>重写的"示例2"，并使用<a href="https://gohugo.io/functions/isset"><code>isset</code>函数</a>+ <code>.Params</code>变量（不同于<a href="https://gohugo.io/functions/param"><code>.Param</code>函数</a>）：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>{{ if (isset .Params "description") }}
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>    {{ index .Params "description" }}
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>{{ else }}
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>    {{ .Summary }}
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>{{ end }}
+</code></pre></div>
+<h4 id="5-if-else-if-else">示例5： <code>if</code> .. <code>else if</code> .. <code>else</code><a class="headerlink" href="#5-if-else-if-else" title="Permanent link">⚓︎</a></h4>
+<p>​   与<code>with</code>不同，<code>if</code>还可以包含<code>else if</code>子句。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>{{ if (isset .Params "description") }}
+<a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>    {{ index .Params "description" }}
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>{{ else if (isset .Params "summary") }}
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>    {{ index .Params "summary" }}
+<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>{{ else }}
+<a href="#__codelineno-23-6" id="__codelineno-23-6" name="__codelineno-23-6"></a>    {{ .Summary }}
+<a href="#__codelineno-23-7" id="__codelineno-23-7" name="__codelineno-23-7"></a>{{ end }}
+</code></pre></div>
+<h4 id="6-and-or">示例6： <code>and</code> &amp; <code>or</code><a class="headerlink" href="#6-and-or" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>{{ if (and (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")) }}
+</code></pre></div>
+<h2 id="_13">管道<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h2>
+<p>​   Go模板最强大的组件之一是能够将操作一层层堆叠在一起。这是通过使用管道来完成的。从Unix管道借鉴而来，概念很简单：每个管道的输出都成为下一个管道的输入。</p>
+<p>​   由于Go模板的语法非常简单，因此管道对于能够链接在一起的函数调用非常重要。管道的一个限制是它们只能处理单个值，该值成为下一个管道的最后一个参数。</p>
+<p>​   一些简单的示例应该有助于帮助您了解如何使用管道。</p>
+<h3 id="1-shuffle">示例1： <code>shuffle</code><a class="headerlink" href="#1-shuffle" title="Permanent link">⚓︎</a></h3>
+<p>​   以下两个示例在功能上是相同的：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a>{{ shuffle (seq 1 5) }}
+<a href="#__codelineno-25-2" id="__codelineno-25-2" name="__codelineno-25-2"></a>{{ (seq 1 5) | shuffle }}
+</code></pre></div>
+<h3 id="2-index">示例2： <code>index</code><a class="headerlink" href="#2-index" title="Permanent link">⚓︎</a></h3>
+<p>​   以下访问名为"disqus_url"的页面参数并转义HTML。此示例还使用内置于Go模板中的<a href="https://gohugo.io/functions/index-function/">index函数</a>：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a>{{ index .Params "disqus_url" | html }}
+</code></pre></div>
+<h3 id="3-issetor">示例3： 带有<code>isset</code>的<code>or</code><a class="headerlink" href="#3-issetor" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a>{{ if or (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr") }}
+<a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a>Stuff Here
+<a href="#__codelineno-27-3" id="__codelineno-27-3" name="__codelineno-27-3"></a>{{ end }}
+</code></pre></div>
+<p>可以重写为</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a>{{ if isset .Params "caption" | or isset .Params "title" | or isset .Params "attr" }}
+<a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a>Stuff Here
+<a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a>{{ end }}
+</code></pre></div>
+<h2 id="_14">上下文（也称"点"）<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h2>
+<p>​   Go模板最容易被忽视的理解概念是，<code>{{ . }}</code>始终指向当前上下文。 </p>
+<ul>
+<li>在您的模板的顶层，它将是可用的数据集。 </li>
+<li>但是，在迭代中，它将具有循环中当前项的值；即<code>{{ . }}</code>将不再引用整个页面可用的数据。 </li>
+</ul>
+<p>​   如果您需要从循环内部访问页面级别的数据（例如，在前置元数据中设置的页面参数），则可能需要执行以下操作之一：</p>
+<h3 id="1_2">1.定义一个独立于上下文的变量<a class="headerlink" href="#1_2" title="Permanent link">⚓︎</a></h3>
+<p>​   以下示例演示如何定义一个独立于上下文的变量。</p>
+<p>tags-range-with-page-variable.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a>{{ $title := .Site.Title }}
+<a href="#__codelineno-29-2" id="__codelineno-29-2" name="__codelineno-29-2"></a>&lt;ul&gt;
+<a href="#__codelineno-29-3" id="__codelineno-29-3" name="__codelineno-29-3"></a>{{ range .Params.tags }}
+<a href="#__codelineno-29-4" id="__codelineno-29-4" name="__codelineno-29-4"></a>    &lt;li&gt;
+<a href="#__codelineno-29-5" id="__codelineno-29-5" name="__codelineno-29-5"></a>        &lt;a href="/tags/{{ . | urlize }}"&gt;{{ . }}&lt;/a&gt;
+<a href="#__codelineno-29-6" id="__codelineno-29-6" name="__codelineno-29-6"></a>        - {{ $title }}
+<a href="#__codelineno-29-7" id="__codelineno-29-7" name="__codelineno-29-7"></a>    &lt;/li&gt;
+<a href="#__codelineno-29-8" id="__codelineno-29-8" name="__codelineno-29-8"></a>{{ end }}
+<a href="#__codelineno-29-9" id="__codelineno-29-9" name="__codelineno-29-9"></a>&lt;/ul&gt;
+</code></pre></div>
+<p>请注意，一旦我们进入循环（即 <code>range</code>），<code>{{ . }}</code> 的值就已经改变了。我们在循环外面定义了一个变量（<code>{{ $title }}</code>），并为其分配了一个值，以便我们可以从循环内部访问该值。</p>
+<h3 id="2_2">2.使用<code>$.</code>访问全局上下文<a class="headerlink" href="#2_2" title="Permanent link">⚓︎</a></h3>
+<p>​   <code>$</code> 在模板中具有特殊意义。<code>$</code>默认情况下被设置为 <code>.</code>（"the dot"）的起始值。这是<a href="https://golang.org/pkg/text/template/#hdr-Variables">Go text/template的文档功能</a>。这意味着您可以从任何地方访问全局上下文。下面是先前的代码块的等效示例，但现在使用 <code>$</code> 从全局上下文中获取 <code>.Site.Title</code>：</p>
+<p>range-through-tags-w-global.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a>&lt;ul&gt;
+<a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a>{{ range .Params.tags }}
+<a href="#__codelineno-30-3" id="__codelineno-30-3" name="__codelineno-30-3"></a>  &lt;li&gt;
+<a href="#__codelineno-30-4" id="__codelineno-30-4" name="__codelineno-30-4"></a>    &lt;a href="/tags/{{ . | urlize }}"&gt;{{ . }}&lt;/a&gt;
+<a href="#__codelineno-30-5" id="__codelineno-30-5" name="__codelineno-30-5"></a>            - {{ $.Site.Title }}
+<a href="#__codelineno-30-6" id="__codelineno-30-6" name="__codelineno-30-6"></a>  &lt;/li&gt;
+<a href="#__codelineno-30-7" id="__codelineno-30-7" name="__codelineno-30-7"></a>{{ end }}
+<a href="#__codelineno-30-8" id="__codelineno-30-8" name="__codelineno-30-8"></a>&lt;/ul&gt;
+</code></pre></div>
+<p>​   如果有人恶意重新定义特殊字符（例如 <code>{{ $ := .Site }}</code>），<code>$</code> 的内置魔力将停止工作。不要这样做。当然，您可以在全局上下文中使用 <code>{{ $ := . }}</code> 来重置 <code>$</code> 的默认值以恢复其功能。</p>
+<h2 id="_15">空格<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h2>
+<p>​   Go 1.6可以通过在相应的 <code>{{</code>或<code>}}</code>分隔符旁边包含连字符（<code>-</code>）和空格来修剪Go标记的两侧的空格的功能。</p>
+<p>​   例如，以下Go模板将在其HTML输出中包含换行符和水平制表符：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-31-1" id="__codelineno-31-1" name="__codelineno-31-1"></a>&lt;div&gt;
+<a href="#__codelineno-31-2" id="__codelineno-31-2" name="__codelineno-31-2"></a>  {{ .Title }}
+<a href="#__codelineno-31-3" id="__codelineno-31-3" name="__codelineno-31-3"></a>&lt;/div&gt;
+</code></pre></div>
+<p>它将输出：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-32-1" id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a href="#__codelineno-32-2" id="__codelineno-32-2" name="__codelineno-32-2"></a>  Hello, World!
+<a href="#__codelineno-32-3" id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>​   在以下示例中使用<code>-</code>将删除围绕<code>.Title</code>变量的额外空格并删除换行符： </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a>&lt;div&gt;
+<a href="#__codelineno-33-2" id="__codelineno-33-2" name="__codelineno-33-2"></a>  {{- .Title -}}
+<a href="#__codelineno-33-3" id="__codelineno-33-3" name="__codelineno-33-3"></a>&lt;/div&gt;
+</code></pre></div>
+<p>它将输出：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Go 语言认为以下字符是空白字符：</p>
+<ul>
+<li>空格 </li>
+<li>水平制表符 </li>
+<li>回车符 </li>
+<li>换行符</li>
+</ul>
+<h2 id="_16">注释<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h2>
+<p>​   为了使您的模板组织有序并在团队之间共享信息，您可能希望向您的模板添加注释。在Hugo中有两种方法可以做到这一点。</p>
+<h3 id="go">Go模板注释<a class="headerlink" href="#go" title="Permanent link">⚓︎</a></h3>
+<p>​   Go模板支持<code>{{/*</code>和<code>*/}}</code>来打开和关闭注释块。该块内的任何内容都不会被渲染。</p>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a>Bonsoir, {{/* {{ add 0 + 2 }} */}}Eliott.
+</code></pre></div>
+<p>将渲染<code>Bonsoir, Eliott.</code>，而不关心注释块中的语法错误（<code>add 0 + 2</code>）。</p>
+<h3 id="html">HTML 注释<a class="headerlink" href="#html" title="Permanent link">⚓︎</a></h3>
+<p>​   您可以通过将 HTML 代码注释的字符串管道化到 <code>safeHTML</code> 中来添加 HTML 注释。</p>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a>{{ "&lt;!-- This is an HTML comment --&gt;" | safeHTML }}
+</code></pre></div>
+<p>​   如果您需要使用变量构造这样的HTML注释，只需将<code>printf</code>管道化到<code>safeHTML</code>。</p>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a>{{ printf "&lt;!-- Our website is named: %s --&gt;" .Site.Title | safeHTML }}
+</code></pre></div>
+<h4 id="go-html">包含 Go 模板的 HTML 注释<a class="headerlink" href="#go-html" title="Permanent link">⚓︎</a></h4>
+<p>​   默认情况下，HTML注释会被删除，但其内容仍将被求值。这意味着尽管HTML注释永远不会将任何内容渲染到最终的HTML页面，但其中包含的代码可能会导致构建过程失败。</p>
+<p>​   不要尝试使用HTML注释来注释掉Go模板代码。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-38-1" id="__codelineno-38-1" name="__codelineno-38-1"></a>&lt;!-- {{ $author := "Emma Goldman" }} was a great woman. --&gt;
+<a href="#__codelineno-38-2" id="__codelineno-38-2" name="__codelineno-38-2"></a>{{ $author }}
+</code></pre></div>
+<p>​   模板引擎将删除HTML注释中的内容，但如果其中存在Go模板代码，则将首先求值任何Go模板代码。因此，上面的示例将渲染成<code>Emma Goldman</code>，因为<code>$author</code>变量在HTML注释中得到求值。但是，如果HTML注释中的代码有错误，构建将会失败。</p>
+<h2 id="hugo">Hugo参数<a class="headerlink" href="#hugo" title="Permanent link">⚓︎</a></h2>
+<p>​   Hugo 提供了通过<a href="https://gohugo.io/getting-started/configuration">站点配置</a>（用于整个站点的值）或每个特定内容的元数据（即<a href="https://gohugo.io/content-management/front-matter">前置元数据</a>）向模板层传递值的选项。您可以定义任何类型的任何值，并在模板中任意使用它们，只要这些值得到<a href="https://gohugo.io/content-management/front-matter#front-matter-formats">前置元数据格式</a>支持。</p>
+<h2 id="page">使用内容（<code>page</code>）参数<a class="headerlink" href="#page" title="Permanent link">⚓︎</a></h2>
+<p>​   您可以在单个内容的<a href="https://gohugo.io/content-management/front-matter">前置元数据</a>中提供变量以供模板使用。</p>
+<p>​   Hugo 文档中使用了一个示例。大多数页面都受益于提供目录，但有时目录并不合适。我们在前置元数据中定义了一个 <code>notoc</code> 变量，当设置为 <code>true</code> 时，将防止目录呈现。</p>
+<p>以下是示例前置元数据：</p>
+<p>content/example.md</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">yaml</label><label for="__tabbed_1_2">toml</label><label for="__tabbed_1_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-39-1" id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="nn">---</span><span class="w"></span>
+<a href="#__codelineno-39-2" id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="nt">notoc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a href="#__codelineno-39-3" id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example</span><span class="w"></span>
+<a href="#__codelineno-39-4" id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="nn">---</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-40-1" id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="err">+++</span><span class="w"></span>
+<a href="#__codelineno-40-2" id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="n">notoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<a href="#__codelineno-40-3" id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Example'</span><span class="w"></span>
+<a href="#__codelineno-40-4" id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="err">+++</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-41-1" id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-41-2" id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="w">   </span><span class="nt">"notoc"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-41-3" id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="w">   </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example"</span><span class="w"></span>
+<a href="#__codelineno-41-4" id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   以下是可以在 <code>toc.html</code> <a href="https://gohugo.io/templates/partials">局部模板</a>中使用的对应代码示例：</p>
+<p>layouts/partials/toc.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-42-1" id="__codelineno-42-1" name="__codelineno-42-1"></a>{{ if not .Params.notoc }}
+<a href="#__codelineno-42-2" id="__codelineno-42-2" name="__codelineno-42-2"></a>&lt;aside&gt;
+<a href="#__codelineno-42-3" id="__codelineno-42-3" name="__codelineno-42-3"></a>  &lt;header&gt;
+<a href="#__codelineno-42-4" id="__codelineno-42-4" name="__codelineno-42-4"></a>    &lt;a href="#{{ .Title | urlize }}"&gt;
+<a href="#__codelineno-42-5" id="__codelineno-42-5" name="__codelineno-42-5"></a>    &lt;h3&gt;{{ .Title }}&lt;/h3&gt;
+<a href="#__codelineno-42-6" id="__codelineno-42-6" name="__codelineno-42-6"></a>    &lt;/a&gt;
+<a href="#__codelineno-42-7" id="__codelineno-42-7" name="__codelineno-42-7"></a>  &lt;/header&gt;
+<a href="#__codelineno-42-8" id="__codelineno-42-8" name="__codelineno-42-8"></a>  {{ .TableOfContents }}
+<a href="#__codelineno-42-9" id="__codelineno-42-9" name="__codelineno-42-9"></a>&lt;/aside&gt;
+<a href="#__codelineno-42-10" id="__codelineno-42-10" name="__codelineno-42-10"></a>&lt;a href="#" id="toc-toggle"&gt;&lt;/a&gt;
+<a href="#__codelineno-42-11" id="__codelineno-42-11" name="__codelineno-42-11"></a>{{ end }}
+</code></pre></div>
+<p>​   我们希望页面的默认行为是包含目录，除非另有指定。此模板检查此页面前置元数据中的 <code>notoc:</code> 字段是否为 <code>true</code>。</p>
+<h2 id="_17">使用站点配置参数<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h2>
+<p>​   您可以在<a href="https://gohugo.io/getting-started/configuration">站点配置</a>文件中任意定义任何数量的站点级参数。这些参数在您的模板中全局可用。</p>
+<p>​   例如，您可以声明以下内容：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">yaml</label><label for="__tabbed_2_2">toml</label><label for="__tabbed_2_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-43-1" id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-43-2" id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="w">  </span><span class="nt">copyrighthtml</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copyright &amp;#xA9; 2017 John Doe. All Rights Reserved.</span><span class="w"></span>
+<a href="#__codelineno-43-3" id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="w">  </span><span class="nt">sidebarrecentlimit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<a href="#__codelineno-43-4" id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="w">  </span><span class="nt">twitteruser</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spf13</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-44-1" id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="k">[params]</span><span class="w"></span>
+<a href="#__codelineno-44-2" id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="w">  </span><span class="n">copyrighthtml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Copyright &amp;#xA9; 2017 John Doe. All Rights Reserved.'</span><span class="w"></span>
+<a href="#__codelineno-44-3" id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="w">  </span><span class="n">sidebarrecentlimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<a href="#__codelineno-44-4" id="__codelineno-44-4" name="__codelineno-44-4"></a><span class="w">  </span><span class="n">twitteruser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'spf13'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-45-1" id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-45-2" id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="w">   </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-45-3" id="__codelineno-45-3" name="__codelineno-45-3"></a><span class="w">      </span><span class="nt">"copyrighthtml"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Copyright \u0026#xA9; 2017 John Doe. All Rights Reserved."</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-45-4" id="__codelineno-45-4" name="__codelineno-45-4"></a><span class="w">      </span><span class="nt">"sidebarrecentlimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-45-5" id="__codelineno-45-5" name="__codelineno-45-5"></a><span class="w">      </span><span class="nt">"twitteruser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spf13"</span><span class="w"></span>
+<a href="#__codelineno-45-6" id="__codelineno-45-6" name="__codelineno-45-6"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-45-7" id="__codelineno-45-7" name="__codelineno-45-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   在页脚布局中，您可以声明仅在提供了 <code>copyrighthtml</code> 参数时才呈现的 <code>&lt;footer&gt;</code>。如果提供了该参数，则需要通过 <a href="https://gohugo.io/functions/safehtml/"><code>safeHTML</code> 函数</a>声明该字符串可以安全使用，以便 HTML 实体不会被再次转义。这使您可以轻松地每年 1 月 1 日仅更新顶级配置文件，而无需在模板中查找。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-46-1" id="__codelineno-46-1" name="__codelineno-46-1"></a>{{ if .Site.Params.copyrighthtml }}
+<a href="#__codelineno-46-2" id="__codelineno-46-2" name="__codelineno-46-2"></a>    &lt;footer&gt;
+<a href="#__codelineno-46-3" id="__codelineno-46-3" name="__codelineno-46-3"></a>        &lt;div class="text-center"&gt;{{ .Site.Params.CopyrightHTML | safeHTML }}&lt;/div&gt;
+<a href="#__codelineno-46-4" id="__codelineno-46-4" name="__codelineno-46-4"></a>    &lt;/footer&gt;
+<a href="#__codelineno-46-5" id="__codelineno-46-5" name="__codelineno-46-5"></a>{{ end }}
+</code></pre></div>
+<p>​   一种替代写"<code>if</code>"并引用同一值的方法是使用<code>with</code>。<code>with</code>在其作用域内重新绑定上下文(<code>.</code>)，如果该变量不存在，则跳过块：</p>
+<p>layouts/partials/twitter.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-47-1" id="__codelineno-47-1" name="__codelineno-47-1"></a>{{ with .Site.Params.twitteruser }}
+<a href="#__codelineno-47-2" id="__codelineno-47-2" name="__codelineno-47-2"></a>    &lt;div&gt;
+<a href="#__codelineno-47-3" id="__codelineno-47-3" name="__codelineno-47-3"></a>        &lt;a href="https://twitter.com/{{ . }}" rel="author"&gt;
+<a href="#__codelineno-47-4" id="__codelineno-47-4" name="__codelineno-47-4"></a>        &lt;img src="/images/twitter.png" width="48" height="48" title="Twitter: {{ . }}" alt="Twitter"&gt;&lt;/a&gt;
+<a href="#__codelineno-47-5" id="__codelineno-47-5" name="__codelineno-47-5"></a>    &lt;/div&gt;
+<a href="#__codelineno-47-6" id="__codelineno-47-6" name="__codelineno-47-6"></a>{{ end }}
+</code></pre></div>
+<p>​   最后，您也可以将"魔术常量"从您的布局中拉出来。以下示例使用<code>first</code>函数，以及<code>.RelPermalink</code>页面变量和<code>.Site.Pages</code>站点变量。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-48-1" id="__codelineno-48-1" name="__codelineno-48-1"></a>&lt;nav&gt;
+<a href="#__codelineno-48-2" id="__codelineno-48-2" name="__codelineno-48-2"></a>  &lt;h1&gt;Recent Posts&lt;/h1&gt;
+<a href="#__codelineno-48-3" id="__codelineno-48-3" name="__codelineno-48-3"></a>  &lt;ul&gt;
+<a href="#__codelineno-48-4" id="__codelineno-48-4" name="__codelineno-48-4"></a>  {{- range first .Site.Params.SidebarRecentLimit .Site.Pages -}}
+<a href="#__codelineno-48-5" id="__codelineno-48-5" name="__codelineno-48-5"></a>      &lt;li&gt;&lt;a href="{{ .RelPermalink }}"&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+<a href="#__codelineno-48-6" id="__codelineno-48-6" name="__codelineno-48-6"></a>  {{- end -}}
+<a href="#__codelineno-48-7" id="__codelineno-48-7" name="__codelineno-48-7"></a>  &lt;/ul&gt;
+<a href="#__codelineno-48-8" id="__codelineno-48-8" name="__codelineno-48-8"></a>&lt;/nav&gt;    
+</code></pre></div>
+<h2 id="_18">示例：显示未来事件<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h2>
+<p>​   假设有以下内容结构和前置元数据：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-49-1" id="__codelineno-49-1" name="__codelineno-49-1"></a>content/
+<a href="#__codelineno-49-2" id="__codelineno-49-2" name="__codelineno-49-2"></a>└── events/
+<a href="#__codelineno-49-3" id="__codelineno-49-3" name="__codelineno-49-3"></a>    ├── event-1.md
+<a href="#__codelineno-49-4" id="__codelineno-49-4" name="__codelineno-49-4"></a>    ├── event-2.md
+<a href="#__codelineno-49-5" id="__codelineno-49-5" name="__codelineno-49-5"></a>    └── event-3.md
+</code></pre></div>
+<p>content/events/event-1.md.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">yaml</label><label for="__tabbed_3_2">toml</label><label for="__tabbed_3_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-50-1" id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021-12-06T10:37:16-08:00</span><span class="w"></span>
+<a href="#__codelineno-50-2" id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<a href="#__codelineno-50-3" id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="nt">end_date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021-12-05T11:00:00-08:00</span><span class="w"></span>
+<a href="#__codelineno-50-4" id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021-12-05T09:00:00-08:00</span><span class="w"></span>
+<a href="#__codelineno-50-5" id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event 1</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-51-1" id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021-12-06T10:37:16-08:00</span><span class="w"></span>
+<a href="#__codelineno-51-2" id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="n">draft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<a href="#__codelineno-51-3" id="__codelineno-51-3" name="__codelineno-51-3"></a><span class="n">end_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021-12-05T11:00:00-08:00</span><span class="w"></span>
+<a href="#__codelineno-51-4" id="__codelineno-51-4" name="__codelineno-51-4"></a><span class="n">start_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021-12-05T09:00:00-08:00</span><span class="w"></span>
+<a href="#__codelineno-51-5" id="__codelineno-51-5" name="__codelineno-51-5"></a><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Event 1'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-52-1" id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-52-2" id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="w">   </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-06T10:37:16-08:00"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-52-3" id="__codelineno-52-3" name="__codelineno-52-3"></a><span class="w">   </span><span class="nt">"draft"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-52-4" id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="w">   </span><span class="nt">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-05T11:00:00-08:00"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-52-5" id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="w">   </span><span class="nt">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-05T09:00:00-08:00"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-52-6" id="__codelineno-52-6" name="__codelineno-52-6"></a><span class="w">   </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Event 1"</span><span class="w"></span>
+<a href="#__codelineno-52-7" id="__codelineno-52-7" name="__codelineno-52-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   这个<a href="https://gohugo.io/templates/partials">局部模板</a>渲染未来的事件：</p>
+<p>layouts/partials/future-events.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-53-1" id="__codelineno-53-1" name="__codelineno-53-1"></a>&lt;h2&gt;Future Events&lt;/h2&gt;
+<a href="#__codelineno-53-2" id="__codelineno-53-2" name="__codelineno-53-2"></a>&lt;ul&gt;
+<a href="#__codelineno-53-3" id="__codelineno-53-3" name="__codelineno-53-3"></a>  {{ range where site.RegularPages "Type" "events" }}
+<a href="#__codelineno-53-4" id="__codelineno-53-4" name="__codelineno-53-4"></a>    {{ if gt (.Params.start_date | time.AsTime) now }}
+<a href="#__codelineno-53-5" id="__codelineno-53-5" name="__codelineno-53-5"></a>      {{ $startDate := .Params.start_date | time.Format ":date_medium" }}
+<a href="#__codelineno-53-6" id="__codelineno-53-6" name="__codelineno-53-6"></a>      &lt;li&gt;
+<a href="#__codelineno-53-7" id="__codelineno-53-7" name="__codelineno-53-7"></a>        &lt;a href="{{ .RelPermalink }}"&gt;{{ .LinkTitle }}&lt;/a&gt; - {{ $startDate }}
+<a href="#__codelineno-53-8" id="__codelineno-53-8" name="__codelineno-53-8"></a>      &lt;/li&gt;
+<a href="#__codelineno-53-9" id="__codelineno-53-9" name="__codelineno-53-9"></a>    {{ end }}
+<a href="#__codelineno-53-10" id="__codelineno-53-10" name="__codelineno-53-10"></a>  {{ end }}
+<a href="#__codelineno-53-11" id="__codelineno-53-11" name="__codelineno-53-11"></a>&lt;/ul&gt;
+</code></pre></div>
+<p>​   如果将前置元数据限制为TOML格式，并省略日期字段周围的引号，则可以执行日期比较而无需强制转换。</p>
+<p>layouts/partials/future-events.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-54-1" id="__codelineno-54-1" name="__codelineno-54-1"></a>&lt;h2&gt;Future Events&lt;/h2&gt;
+<a href="#__codelineno-54-2" id="__codelineno-54-2" name="__codelineno-54-2"></a>&lt;ul&gt;
+<a href="#__codelineno-54-3" id="__codelineno-54-3" name="__codelineno-54-3"></a>  {{ range where (where site.RegularPages "Type" "events") "Params.start_date" "gt" now }}
+<a href="#__codelineno-54-4" id="__codelineno-54-4" name="__codelineno-54-4"></a>    {{ $startDate := .Params.start_date | time.Format ":date_medium" }}
+<a href="#__codelineno-54-5" id="__codelineno-54-5" name="__codelineno-54-5"></a>    &lt;li&gt;
+<a href="#__codelineno-54-6" id="__codelineno-54-6" name="__codelineno-54-6"></a>      &lt;a href="{{ .RelPermalink }}"&gt;{{ .LinkTitle }}&lt;/a&gt; - {{ $startDate }}
+<a href="#__codelineno-54-7" id="__codelineno-54-7" name="__codelineno-54-7"></a>    &lt;/li&gt;
+<a href="#__codelineno-54-8" id="__codelineno-54-8" name="__codelineno-54-8"></a>  {{ end }}
+<a href="#__codelineno-54-9" id="__codelineno-54-9" name="__codelineno-54-9"></a>&lt;/ul&gt;
+</code></pre></div>
+<h2 id="_19">另请参阅<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><a href="https://gohugo.io/variables/files/">文件变量 </a></li>
+<li><a href="https://gohugo.io/variables/menus/">菜单变量</a></li>
+</ul>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Templates Overview" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Templates Overview
+            </div>
+</div>
+</a>
+<a aria-label="Next: Hugo 的查找顺序" class="md-footer__link md-footer__link--next" href="../TemplateLookupOrder/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Hugo 的查找顺序
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "content.tabs.link", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="../../javascripts/tex-mml-chtml.js"></script>
+<script src="../../javascripts/deal-zero-width-space.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

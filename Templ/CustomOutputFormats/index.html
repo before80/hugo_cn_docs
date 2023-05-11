@@ -1,0 +1,2868 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.8" name="generator"/>
+<title>自定义输出格式 - Hugo 中文文档集</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#custom-output-formats-">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hugo 中文文档集" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hugo 中文文档集
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              自定义输出格式
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hugo 中文文档集" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Hugo 中文文档集
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        首页
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../AboutHugo/">关于Hugo</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="关于Hugo" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          关于Hugo
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugosSecurityModel/">
+        Hugo 的安全模型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoAndGDPR/">
+        Hugo and GDPR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/WhatIsHugo/">
+        什么是 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoFeatures/">
+        Hugo特性
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/TheBenefitsOfStatic/">
+        静态网站生成器的好处
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/License/">
+        License
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Installation/">安装</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="安装" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          安装
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/MacOS/">
+        macOS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Linux/">
+        Linux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Windows/">
+        Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/BSD/">
+        BSD
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../GettingStarted/">开始入门</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="开始入门" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          开始入门
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/QuickStart/">
+        快速入门
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/BasicUsage/">
+        基础用法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/DirectoryStructure/">
+        目录结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/Configuration/">
+        配置 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ConfigurationMarkup/">
+        配置Markup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ExternalLearningResources/">
+        外部学习资源
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoModules/">Hugo 模块</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo 模块" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Hugo 模块
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ConfigureModules/">
+        配置模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/UseHugoModules/">
+        使用 Hugo 模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ThemeComponents/">
+        主题组件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../ContentManagement/">内容管理</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="内容管理" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          内容管理
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Organization/">
+        内容组织
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/PageBundles/">
+        页面Bundles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ContentFormats/">
+        内容格式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Diagrams/">
+        图表
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/FrontMatter/">
+        前置元数据
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/BuildOptions/">
+        构建选项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/PageResources/">
+        页面资源
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ImageProcessing/">
+        图像处理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Shortcodes/">
+        简码
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/RelatedContent/">
+        相关内容
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Sections/">
+        内容章节
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/ContentTypes/">
+        内容类型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Archetypes/">
+        原型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Taxonomies/">
+        分类法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Summaries/">
+        内容摘要
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/LinksAndCrossReferences/">
+        链接和交叉引用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/URLManagement/">
+        URL管理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Menus/">
+        菜单
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/StaticFiles/">
+        静态文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/TableOfContents/">
+        目录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Comments/">
+        评论
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/Multilingual/">
+        多语言模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ContentManagement/SyntaxHighlighting/">
+        语法高亮
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">模板</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="模板" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          模板
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Templating/">
+        Hugo模板入门介绍
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TemplateLookupOrder/">
+        Hugo 的查找顺序
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          自定义输出格式
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        自定义输出格式
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    媒体类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    输出格式定义
+  </a>
+<nav aria-label="输出格式定义" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    配置输出格式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    页面的输出格式
+  </a>
+<nav aria-label="页面的输出格式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    默认输出格式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    自定义输出格式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    输出格式列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    输出格式链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    您的输出格式模板
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../BaseTemplatesAndBlocks/">
+        基础模板和块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RenderHooks/">
+        Markdown渲染钩子
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ListTemplates/">
+        列表模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HomepageTemplate/">
+        主页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SectionTemplates/">
+        章节页面模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TaxonomyTemplates/">
+        分类模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SinglePageTemplates/">
+        单页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ContentViewTemplates/">
+        内容视图模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DataTemplates/">
+        数据模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PartialTemplates/">
+        局部模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ShortcodeTemplates/">
+        简码模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LocalFileTemplates/">
+        本地文件模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../404Page/">
+        404页面
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MenuTemplates/">
+        菜单模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Pagination/">
+        分页
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RSSTemplates/">
+        RSS模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SitemapTemplates/">
+        Sitemap模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Robots_txt/">
+        Robots.txt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InternalTemplates/">
+        内置模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TemplateDebugging/">
+        模板调试
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          函数
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="函数" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          函数
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FunctionsQuickReference/">
+        Functions Quick Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_AddDate/">
+        .AddDate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Format/">
+        .Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Get/">
+        .Get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_GetPage/">
+        .GetPage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_HasMenuCurrent/">
+        .HasMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_IsMenuCurrent/">
+        .IsMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Param/">
+        .Param
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Render/">
+        .Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_RenderString/">
+        .RenderString
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Scratch/">
+        .Scratch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Store/">
+        .Store
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Unix/">
+        .Unix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsLangURL/">
+        absLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsURL/">
+        absURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/After/">
+        after
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Anchorize/">
+        anchorize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Append/">
+        append
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Apply/">
+        apply
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Base64/">
+        base64
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Chomp/">
+        chomp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Complement/">
+        complement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Cond/">
+        cond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countrunes/">
+        countrunes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countwords/">
+        countwords
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Crypto_FNV32a/">
+        crypto.FNV32a
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Default/">
+        default
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Delimit/">
+        delimit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Dict/">
+        dict
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Duration/">
+        duration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/EchoParam/">
+        echoParam
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Emojify/">
+        emojify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Eq/">
+        eq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ErrorfAndWarnf/">
+        errorf and warnf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FileExists/">
+        fileExists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRE/">
+        findRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRESubmatch/">
+        findRESubmatch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/First/">
+        first
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Float/">
+        float
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ge/">
+        ge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Getenv/">
+        getenv
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Group/">
+        group
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Gt/">
+        gt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Highlight/">
+        highlight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hmac/">
+        hmac
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlEscape/">
+        htmlEscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlUnescape/">
+        htmlUnescape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Humanize/">
+        humanize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/I18n/">
+        i18n
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ImageFilters/">
+        Image Filters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/In/">
+        in
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Index/">
+        index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Int/">
+        int
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Intersect/">
+        intersect
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Isset/">
+        isset
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Jsonify/">
+        jsonify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang/">
+        lang
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang_Merge/">
+        lang.Merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Last/">
+        last
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Le/">
+        le
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Len/">
+        len
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lower/">
+        lower
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lt/">
+        lt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Markdownify/">
+        markdownify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Math/">
+        Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Md5/">
+        md5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Merge/">
+        merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ne/">
+        ne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Now/">
+        now
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Os_Stat/">
+        os.Stat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/PartialCached/">
+        partialCached
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Base/">
+        path.Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_BaseName/">
+        path.BaseName
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Clean/">
+        path.Clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Dir/">
+        path.Dir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Ext/">
+        path.Ext
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Join/">
+        path.Join
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Split/">
+        path.Split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Plainify/">
+        plainify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Pluralize/">
+        pluralize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Print/">
+        print
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Printf/">
+        printf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Println/">
+        println
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Querify/">
+        querify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Range/">
+        range
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadDir/">
+        readDir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadFile/">
+        readFile
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ref/">
+        ref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsMap/">
+        reflect.IsMap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsSlice/">
+        reflect.IsSlice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelLangURL/">
+        relLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Relref/">
+        relref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelURL/">
+        relURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Replace/">
+        replace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReplaceRE/">
+        replaceRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeCSS/">
+        safeCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTML/">
+        safeHTML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTMLAttr/">
+        safeHTMLAttr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeJS/">
+        safeJS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeURL/">
+        safeURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Seq/">
+        seq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sha/">
+        sha
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Shuffle/">
+        shuffle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Singularize/">
+        singularize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Site/">
+        site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slice/">
+        slice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slicestr/">
+        slicestr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sort/">
+        sort
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Split/">
+        split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/String/">
+        string
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Contains/">
+        strings.Contains
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_ContainsAny/">
+        strings.ContainsAny
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Count/">
+        strings.Count
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_FirstUpper/">
+        strings.FirstUpper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasPrefix/">
+        strings.HasPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasSuffix/">
+        strings.HasSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Repeat/">
+        strings.Repeat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_RuneCount/">
+        strings.RuneCount
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimLeft/">
+        strings.TrimLeft
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimPrefix/">
+        strings.TrimPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimRight/">
+        strings.TrimRight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimSuffix/">
+        strings.TrimSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Substr/">
+        substr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Symdiff/">
+        symdiff
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Templates_Exists/">
+        templates.Exists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time/">
+        time
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_Format/">
+        time.Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_ParseDuration/">
+        time.ParseDuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Title/">
+        title
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Transform_Unmarshal/">
+        transform.Unmarshal
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Trim/">
+        trim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Truncate/">
+        truncate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Union/">
+        union
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Uniq/">
+        uniq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Upper/">
+        upper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlize/">
+        urlize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlquery/">
+        urlquery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urls_Parse/">
+        urls.Parse
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Where/">
+        where
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/With/">
+        with
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Variables/">变量</a>
+<label for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="变量" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          变量
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SiteVariables/">
+        站点变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PageVariables/">
+        页面变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/ShortcodeVariables/">
+        简码变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PagesMethods/">
+        页面方法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/TaxonomyVariables/">
+        分类变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/FileVariables/">
+        文件变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/MenuVariables/">
+        菜单变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/GitVariables/">
+        Git 信息变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SitemapVariables/">
+        Sitemap变量
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoPipes/">Hugo Pipes</a>
+<label for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo Pipes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Hugo Pipes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/HugoPipes/">
+        Hugo Pipes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/TranspileSassToSCSS/">
+        Transpile Sass to SCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostProcess/">
+        PostProcess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostCSS/">
+        PostCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/JavaScriptBuilding/">
+        JavaScript Building
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/Babel/">
+        Babel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/AssetMinification/">
+        Asset minification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ConcatenatingAssets/">
+        Concatenating assets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/FingerprintingAndSRI/">
+        Fingerprinting and SRI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromTemplate/">
+        Resource from Template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromString/">
+        Resource from String
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletion/">
+        hugo completion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionBash/">
+        hugo completion bash
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionFish/">
+        hugo completion fish
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionPowershell/">
+        hugo completion powershell
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionZsh/">
+        hugo completion zsh
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfig/">
+        hugo config
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfigMounts/">
+        hugo config mounts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvert/">
+        hugo convert
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToJSON/">
+        hugo convert toJSON
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToTOML/">
+        hugo convert toTOML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToYAML/">
+        hugo convert toYAML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoDeploy/">
+        hugo deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoEnv/">
+        hugo env
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGen/">
+        hugo gen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenChromastyles/">
+        hugo gen chromastyles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenDoc/">
+        hugo gen doc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenMan/">
+        hugo gen man
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImport/">
+        hugo import
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImportJekyll/">
+        hugo import jekyll
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoList/">
+        hugo list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListAll/">
+        hugo list all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListDrafts/">
+        hugo list drafts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListExpired/">
+        hugo list expired
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListFuture/">
+        hugo list future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoMod/">
+        hugo mod
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModClean/">
+        hugo mod clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGet/">
+        hugo mod get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGraph/">
+        hugo mod graph
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModInit/">
+        hugo mod init
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpm/">
+        hugo mod npm
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpmPack/">
+        hugo mod npm pack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModTidy/">
+        hugo mod tidy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVendor/">
+        hugo mod vendor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVerify/">
+        hugo mod verify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNew/">
+        hugo new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewSite/">
+        hugo new site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewTheme/">
+        hugo new theme
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoServer/">
+        hugo server
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoVersion/">
+        hugo version
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Troubleshooting" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/Troubleshoot.md">
+        Troubleshoot
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/FAQ/">
+        FAQ
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/BuildPerformance/">
+        Build Performance
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Tools/">工具</a>
+<label for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="工具" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Migrations/">
+        Migrations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/StarterKits/">
+        Starter Kits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Frontends/">
+        Frontends
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/EditorPlug-ins/">
+        Editor Plug-ins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Search/">
+        Search
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/OtherProjects/">
+        Other Projects
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HostingDeployment/">Hosting &amp; Deployment</a>
+<label for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hosting &amp; Deployment" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          Hosting &amp; Deployment
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HugoDeploy/">
+        Hugo Deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOn21YunBox/">
+        Host on 21YunBox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAWSAmplify/">
+        Host on AWS Amplify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAzureStaticWebApps/">
+        Host on Azure Static Web Apps
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnNetlify/">
+        Host on Netlify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnRender/">
+        Host on Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnFirebase/">
+        Host on Firebase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitHub/">
+        Host on GitHub
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitLab/">
+        Host on GitLab
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnKeyCDN/">
+        Host on KeyCDN
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnCloudflarePages/">
+        Host on Cloudflare Pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRsync/">
+        Deployment with Rsync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRclone/">
+        Deployment with Rclone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostingOnAzureStaticWebApps/">
+        Hosting on Azure Static Web Apps
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15">
+          贡献
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="贡献" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          贡献
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/ContributeToHugo/">
+        Contribute to Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Development/">
+        Development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Themes/">
+        Themes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    媒体类型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    输出格式定义
+  </a>
+<nav aria-label="输出格式定义" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    配置输出格式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    页面的输出格式
+  </a>
+<nav aria-label="页面的输出格式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    默认输出格式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    自定义输出格式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    输出格式列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    输出格式链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    您的输出格式模板
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="custom-output-formats-">Custom Output Formats - 自定义输出格式<a class="headerlink" href="#custom-output-formats-" title="Permanent link">⚓︎</a></h1>
+<p><a href="https://gohugo.io/templates/output-formats/">https://gohugo.io/templates/output-formats/</a></p>
+<p>​   Hugo可以将内容输出为多种格式，包括日历事件、电子书格式、Google AMP和JSON搜索索引，或任何自定义文本格式。 </p>
+<p>​   本页介绍了如何正确配置站点的媒体类型和输出格式，以及如何为自定义输出创建模板。</p>
+<h2 id="_1">媒体类型<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p>​   <a href="https://en.wikipedia.org/wiki/Media_type">媒体类型</a>（也称为MIME类型和内容类型）是用于在互联网上传输文件格式和格式内容的两部分标识符。</p>
+<p>​   这是Hugo中的完整内置媒体类型集：</p>
+<table>
+<thead>
+<tr>
+<th align="left">type</th>
+<th align="left">suffixes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">application/json</td>
+<td align="left">[json]</td>
+</tr>
+<tr>
+<td align="left">application/manifest+json</td>
+<td align="left">[webmanifest]</td>
+</tr>
+<tr>
+<td align="left">application/octet-stream</td>
+<td align="left">[]</td>
+</tr>
+<tr>
+<td align="left">application/pdf</td>
+<td align="left">[pdf]</td>
+</tr>
+<tr>
+<td align="left">application/rss+xml</td>
+<td align="left">[xml rss]</td>
+</tr>
+<tr>
+<td align="left">application/toml</td>
+<td align="left">[toml]</td>
+</tr>
+<tr>
+<td align="left">application/xml</td>
+<td align="left">[xml]</td>
+</tr>
+<tr>
+<td align="left">application/yaml</td>
+<td align="left">[yaml yml]</td>
+</tr>
+<tr>
+<td align="left">font/otf</td>
+<td align="left">[otf]</td>
+</tr>
+<tr>
+<td align="left">font/ttf</td>
+<td align="left">[ttf]</td>
+</tr>
+<tr>
+<td align="left">image/bmp</td>
+<td align="left">[bmp]</td>
+</tr>
+<tr>
+<td align="left">image/gif</td>
+<td align="left">[gif]</td>
+</tr>
+<tr>
+<td align="left">image/jpeg</td>
+<td align="left">[jpg jpeg jpe jif jfif]</td>
+</tr>
+<tr>
+<td align="left">image/png</td>
+<td align="left">[png]</td>
+</tr>
+<tr>
+<td align="left">image/svg+xml</td>
+<td align="left">[svg]</td>
+</tr>
+<tr>
+<td align="left">image/webp</td>
+<td align="left">[webp]</td>
+</tr>
+<tr>
+<td align="left">text/calendar</td>
+<td align="left">[ics]</td>
+</tr>
+<tr>
+<td align="left">text/css</td>
+<td align="left">[css]</td>
+</tr>
+<tr>
+<td align="left">text/csv</td>
+<td align="left">[csv]</td>
+</tr>
+<tr>
+<td align="left">text/html</td>
+<td align="left">[html]</td>
+</tr>
+<tr>
+<td align="left">text/javascript</td>
+<td align="left">[js jsm mjs]</td>
+</tr>
+<tr>
+<td align="left">text/jsx</td>
+<td align="left">[jsx]</td>
+</tr>
+<tr>
+<td align="left">text/markdown</td>
+<td align="left">[md markdown]</td>
+</tr>
+<tr>
+<td align="left">text/plain</td>
+<td align="left">[txt]</td>
+</tr>
+<tr>
+<td align="left">text/tsx</td>
+<td align="left">[tsx]</td>
+</tr>
+<tr>
+<td align="left">text/typescript</td>
+<td align="left">[ts]</td>
+</tr>
+<tr>
+<td align="left">text/x-sass</td>
+<td align="left">[sass]</td>
+</tr>
+<tr>
+<td align="left">text/x-scss</td>
+<td align="left">[scss]</td>
+</tr>
+<tr>
+<td align="left">video/3gpp</td>
+<td align="left">[3gpp 3gp]</td>
+</tr>
+<tr>
+<td align="left">video/mp4</td>
+<td align="left">[mp4]</td>
+</tr>
+<tr>
+<td align="left">video/mpeg</td>
+<td align="left">[mpg mpeg]</td>
+</tr>
+<tr>
+<td align="left">video/ogg</td>
+<td align="left">[ogv]</td>
+</tr>
+<tr>
+<td align="left">video/webm</td>
+<td align="left">[webm]</td>
+</tr>
+<tr>
+<td align="left">video/x-msvideo</td>
+<td align="left">[avi]</td>
+</tr>
+</tbody>
+</table>
+<p>注意：</p>
+<ul>
+<li>可以添加自定义媒体类型或更改默认值；例如，如果您想将<code>text/html</code>的后缀更改为<code>asp</code>。 </li>
+<li><code>Suffixes</code>是在Hugo中用于该媒体类型的URL和文件名的值。 </li>
+<li><code>Type</code>是定义新/自定义<code>Output Formats</code>时必须使用的标识符（见下文）。 </li>
+<li>完整的媒体类型集将在Hugo的内置开发服务器中注册，以确保它们被浏览器识别。 </li>
+</ul>
+<p>​   要添加或修改媒体类型，请在<a href="https://gohugo.io/getting-started/configuration/">站点配置</a>中的<code>mediaTypes</code>部分中定义它，可以为所有站点或特定语言定义。</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">yaml</label><label for="__tabbed_1_2">toml</label><label for="__tabbed_1_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">mediaTypes</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">text/enriched</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">suffixes</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enr</span><span class="w"></span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">text/html</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">suffixes</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">asp</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">[mediaTypes]</span><span class="w"></span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="k">[mediaTypes.'text/enriched']</span><span class="w"></span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">suffixes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'enr'</span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="k">[mediaTypes.'text/html']</span><span class="w"></span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">suffixes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'asp'</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="nt">"mediaTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">      </span><span class="nt">"text/enriched"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">         </span><span class="nt">"suffixes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="s2">"enr"</span><span class="w"></span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">         </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">      </span><span class="nt">"text/html"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">         </span><span class="nt">"suffixes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">            </span><span class="s2">"asp"</span><span class="w"></span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">         </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   上面的示例添加了一个新的媒体类型<code>text/enriched</code>，并更改了内置的<code>text/html</code>媒体类型的后缀。</p>
+<p>注意：这些媒体类型是针对您的输出格式进行配置的。如果要重新定义Hugo的默认输出格式（例如<code>HTML</code>），还需要重新定义媒体类型。因此，如果要将HTML输出格式的后缀从<code>html</code>（默认）更改为<code>htm</code>：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">yaml</label><label for="__tabbed_2_2">toml</label><label for="__tabbed_2_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">mediaTypes</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">text/html</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">suffixes</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">htm</span><span class="w"></span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nt">outputFormats</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="nt">HTML</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="nt">mediaType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/html</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">[mediaTypes]</span><span class="w"></span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="k">[mediaTypes.'text/html']</span><span class="w"></span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">suffixes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'htm'</span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">[outputFormats]</span><span class="w"></span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="k">[outputFormats.HTML]</span><span class="w"></span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">mediaType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'text/html'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">   </span><span class="nt">"mediaTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">      </span><span class="nt">"text/html"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">         </span><span class="nt">"suffixes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">            </span><span class="s2">"htm"</span><span class="w"></span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">         </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">   </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">   </span><span class="nt">"outputFormats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">      </span><span class="nt">"HTML"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">         </span><span class="nt">"mediaType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="w"></span>
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>注意，要让上述内容生效，您还需要在站点配置中添加 <code>outputs</code> 定义。</p>
+<h2 id="_2">输出格式定义<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>​   给定一个媒体类型和一些其他配置，您可以获得一个输出格式。</p>
+<p>​   这是Hugo的所有内置输出格式：</p>
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left">mediaType</th>
+<th align="left">path</th>
+<th align="left">baseName</th>
+<th align="left">rel</th>
+<th align="left">protocol</th>
+<th align="left">isPlainText</th>
+<th align="left">isHTML</th>
+<th align="left">noUgly</th>
+<th align="left">permalinkable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">HTML</td>
+<td align="left">text/html</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">canonical</td>
+<td align="left"></td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">AMP</td>
+<td align="left">text/html</td>
+<td align="left">amp</td>
+<td align="left">index</td>
+<td align="left">amphtml</td>
+<td align="left"></td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">CSS</td>
+<td align="left">text/css</td>
+<td align="left"></td>
+<td align="left">styles</td>
+<td align="left">stylesheet</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">CSV</td>
+<td align="left">text/csv</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">alternate</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">Calendar</td>
+<td align="left">text/calendar</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">alternate</td>
+<td align="left">webcal://</td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">JSON</td>
+<td align="left">application/json</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">alternate</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">MARKDOWN</td>
+<td align="left">text/markdown</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">alternate</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">ROBOTS</td>
+<td align="left">text/plain</td>
+<td align="left"></td>
+<td align="left">robots</td>
+<td align="left">alternate</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">RSS</td>
+<td align="left">application/rss+xml</td>
+<td align="left"></td>
+<td align="left">index</td>
+<td align="left">alternate</td>
+<td align="left"></td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">Sitemap</td>
+<td align="left">application/xml</td>
+<td align="left"></td>
+<td align="left">sitemap</td>
+<td align="left">sitemap</td>
+<td align="left"></td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">WebAppManifest</td>
+<td align="left">application/manifest+json</td>
+<td align="left"></td>
+<td align="left">manifest</td>
+<td align="left">manifest</td>
+<td align="left"></td>
+<td align="left">true</td>
+<td align="left">false</td>
+<td align="left">false</td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>一个页面可以按您想要的多种输出格式输出，只要它们在文件系统上解析为唯一路径即可定义无限数量的输出格式。在上面的表格中，最好的例子是<code>AMP</code> vs <code>HTML</code>。<code>AMP</code>的<code>Path</code>值为<code>amp</code>，因此不会覆盖<code>HTML</code>版本。例如，我们现在可以同时拥有 <code>/index.html</code> 和 <code>/amp/index.html</code>。 </li>
+<li><code>MediaType</code> 必须匹配已定义媒体类型的<code>Type</code>。</li>
+<li>您可以定义新的输出格式或重新定义内置的输出格式；例如，如果您想将<code>AMP</code>页面放在不同的路径中。 </li>
+</ul>
+<p>​   要添加或修改输出格式，请在站点<a href="https://gohugo.io/getting-started/configuration/">配置文件</a>中的 <code>outputFormats</code> 部分中定义它，无论是为所有站点还是为给定的语言。</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">yaml</label><label for="__tabbed_3_2">toml</label><label for="__tabbed_3_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">outputFormats</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="nt">MyEnrichedFormat</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="nt">baseName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myindex</span><span class="w"></span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="nt">isPlainText</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="nt">mediaType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text/enriched</span><span class="w"></span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bep://</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">[outputFormats]</span><span class="w"></span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="k">[outputFormats.MyEnrichedFormat]</span><span class="w"></span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">baseName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'myindex'</span><span class="w"></span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">isPlainText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">mediaType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'text/enriched'</span><span class="w"></span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="n">protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'bep://'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">   </span><span class="nt">"outputFormats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">      </span><span class="nt">"MyEnrichedFormat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">         </span><span class="nt">"baseName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myindex"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">         </span><span class="nt">"isPlainText"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">         </span><span class="nt">"mediaType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/enriched"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">         </span><span class="nt">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bep://"</span><span class="w"></span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   上述示例是虚构的，但如果用于具有 <code>baseURL</code> <code>https://example.org</code> 的站点的主页，它将产生一个具有 URL <code>bep://example.org/myindex.enr</code> 的纯文本主页。</p>
+<h3 id="_3">配置输出格式<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
+<p>​   以下是输出格式的完整配置选项列表及其默认值：</p>
+<ul>
+<li><code>name</code></li>
+</ul>
+<p>输出格式标识符。用于定义您页面的输出格式。 </p>
+<ul>
+<li><code>mediaType</code></li>
+</ul>
+<p>这必须与已定义的媒体类型的<code>Type</code>匹配。 </p>
+<ul>
+<li><code>path</code></li>
+</ul>
+<p>保存输出文件的子路径。 </p>
+<ul>
+<li><code>baseName</code></li>
+</ul>
+<p>用于列表文件名（主页等）的基本文件名。默认值：<code>index</code>。 </p>
+<ul>
+<li><code>rel</code></li>
+</ul>
+<p>可用于在<code>link</code>标记中创建 <code>rel</code> 值。默认值：<code>alternate</code>。 </p>
+<ul>
+<li><code>protocol</code></li>
+</ul>
+<p>将替换 <code>baseURL</code> 中此输出格式的"http://"或"https://"。</p>
+<ul>
+<li><code>isPlainText</code></li>
+</ul>
+<p>使用 Go 的纯文本模板解析器进行模板解析。默认值： <code>false</code>。 </p>
+<ul>
+<li><code>isHTML</code></li>
+</ul>
+<p>仅在与 HTML 类型格式相关的情况下使用，例如页面别名。默认值： <code>false</code>。 </p>
+<ul>
+<li><code>noUgly</code></li>
+</ul>
+<p>用于关闭丑陋的 URL（如果在站点中设置了 <code>uglyURLs</code>为 <code>true</code>）。默认值： <code>false</code>。</p>
+<ul>
+<li><code>notAlternative</code></li>
+</ul>
+<p>enable if it doesn’t make sense to include this format in an <code>AlternativeOutputFormats</code> format listing on <code>Page</code> (e.g., with <code>CSS</code>). Note that we use the term <em>alternative</em> and not <em>alternate</em> here, as it does not necessarily replace the other format. <strong>Default:</strong> <code>false</code>.</p>
+<p>如果在<code>Page</code>的 <code>AlternativeOutputFormats</code> 格式列表中包含此格式不合理（例如使用 <code>CSS</code>），则启用此选项。请注意，此处我们使用 <code>alternative</code> 而不是 <code>alternate</code> 一词，因为它并不一定替代其他格式。默认值： <code>false</code>。</p>
+<ul>
+<li><code>permalinkable</code></li>
+</ul>
+<p>使 <code>.Permalink</code> 和 <code>.RelPermalink</code> 返回渲染输出格式而不是主格式（<a href="https://gohugo.io/templates/output-formats/#link-to-output-formats">见下文</a>）。默认情况下，对于 <code>HTML</code> 和 <code>AMP</code> 启用此选项。默认值： <code>false</code>。 </p>
+<ul>
+<li><code>weight</code></li>
+</ul>
+<p>将其设置为非零值将用作第一个排序标准。</p>
+<h2 id="_4">页面的输出格式<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<p>​   在 Hugo 中，<code>Page</code>可以在文件系统上呈现为多种输出格式。</p>
+<h3 id="_5">默认输出格式<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h3>
+<p>​   每个<code>Page</code>都有一个 <code>Kind</code> 属性，其默认输出格式是基于此属性设置的。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Kind</th>
+<th align="left">Default Output Formats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">HTML</td>
+</tr>
+<tr>
+<td align="left"><code>home</code></td>
+<td align="left">HTML, RSS</td>
+</tr>
+<tr>
+<td align="left"><code>section</code></td>
+<td align="left">HTML, RSS</td>
+</tr>
+<tr>
+<td align="left"><code>taxonomy</code></td>
+<td align="left">HTML, RSS</td>
+</tr>
+<tr>
+<td align="left"><code>term</code></td>
+<td align="left">HTML, RSS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">自定义输出格式<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
+<p>​   这可以通过在<code>Page</code>前置元数据或站点配置（对所有站点或每种语言）中定义一个<code>outputs</code>列表来更改。</p>
+<p>​   站点配置文件中的示例：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">yaml</label><label for="__tabbed_4_2">toml</label><label for="__tabbed_4_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="nt">home</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTML</span><span class="w"></span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AMP</span><span class="w"></span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RSS</span><span class="w"></span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nt">page</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTML</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">[outputs]</span><span class="w"></span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="n">home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'HTML'</span><span class="p">,</span><span class="w"> </span><span class="s">'AMP'</span><span class="p">,</span><span class="w"> </span><span class="s">'RSS'</span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'HTML'</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">   </span><span class="nt">"outputs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">      </span><span class="nt">"home"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">         </span><span class="s2">"HTML"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">         </span><span class="s2">"AMP"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">         </span><span class="s2">"RSS"</span><span class="w"></span>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">      </span><span class="p">],</span><span class="w"></span>
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">      </span><span class="nt">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">         </span><span class="s2">"HTML"</span><span class="w"></span>
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>请注意，在上面的示例中，<code>section</code>、<code>taxonomy</code>和<code>term</code>的输出格式将保持其默认值 <code>["HTML", "RSS"]</code>。</p>
+<table>
+<thead>
+<tr>
+<th align="left">Kind</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>home</code></td>
+<td align="left">The landing page for the home page</td>
+<td align="left"><code>/index.html</code></td>
+</tr>
+<tr>
+<td align="left"><code>page</code></td>
+<td align="left">The landing page for a given page</td>
+<td align="left"><code>my-post</code> page (<code>/posts/my-post/index.html</code>)</td>
+</tr>
+<tr>
+<td align="left"><code>section</code></td>
+<td align="left">The landing page of a given section</td>
+<td align="left"><code>posts</code> section (<code>/posts/index.html</code>)</td>
+</tr>
+<tr>
+<td align="left"><code>taxonomy</code></td>
+<td align="left">The landing page for a taxonomy</td>
+<td align="left"><code>tags</code> taxonomy (<code>/tags/index.html</code>)</td>
+</tr>
+<tr>
+<td align="left"><code>term</code></td>
+<td align="left">The landing page for one taxonomy’s term</td>
+<td align="left">term <code>awesome</code> in <code>tags</code> taxonomy (<code>/tags/awesome/index.html</code>)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><code>outputs</code> 定义是每种<a href="https://gohugo.io/templates/section-templates/#page-kinds"><code>Page</code>的 <code>Kind</code></a>（<code>page</code>、<code>home</code>、<code>section</code>、<code>taxonomy</code> 或 <code>term</code>）的。 </p>
+</li>
+<li>
+<p>These can be overridden per <code>Page</code> in the front matter of content files.</p>
+</li>
+<li>
+<p>所使用的名称（例如 <code>HTML</code>、<code>AMP</code>）必须与已定义的输出格式的<code>Name</code>匹配。</p>
+</li>
+</ul>
+<p>这些名称不区分大小写。 
+- 这些可以在内容文件的前置元数据中针对每个<code>Page</code>进行覆盖。</p>
+<p>​   以下是一个在内容文件中定义呈现<code>Page</code>输出格式的前置元数据的示例：</p>
+<p>content/example.md</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">yaml</label><label for="__tabbed_5_2">toml</label><label for="__tabbed_5_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nn">---</span><span class="w"></span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">html</span><span class="w"></span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amp</span><span class="w"></span>
+<a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json</span><span class="w"></span>
+<a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example</span><span class="w"></span>
+<a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="nn">---</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="err">+++</span><span class="w"></span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'html'</span><span class="p">,</span><span class="w"> </span><span class="s">'amp'</span><span class="p">,</span><span class="w"> </span><span class="s">'json'</span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Example'</span><span class="w"></span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="err">+++</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">   </span><span class="nt">"outputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">      </span><span class="s2">"html"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">      </span><span class="s2">"amp"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">      </span><span class="s2">"json"</span><span class="w"></span>
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">   </span><span class="p">],</span><span class="w"></span>
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">   </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example"</span><span class="w"></span>
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<h2 id="_7">输出格式列表<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h2>
+<p>​   每个<code>Page</code>都有 <code>.OutputFormats</code>（所有格式，包括当前格式）和 <code>.AlternativeOutputFormats</code> 变量，后者可用于在站点的 <code>&lt;head&gt;</code> 中创建<code>link rel</code> 列表。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>{{ range .AlternativeOutputFormats -}}
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>&lt;link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}"&gt;
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>{{ end -}}
+</code></pre></div>
+<h2 id="_8">输出格式链接<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h2>
+<p>​   <code>Page</code> 上的 <code>.Permalink</code> 和 <code>.RelPermalink</code> 将返回为该页面定义的第一个输出格式（通常为 <code>HTML</code>，如果没有其他定义的话）。这与调用它们的模板文件无关。</p>
+<p>来自 <code>single.json.json</code>：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>{{ .RelPermalink }} &gt; /that-page/
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>{{ with  .OutputFormats.Get "json" -}}
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>{{ .RelPermalink }} &gt; /that-page/index.json
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>{{- end }}
+</code></pre></div>
+<p>​   为了使它们返回当前模板文件的输出格式，给定的输出格式应设置其 <code>permalinkable</code> 属性为 <code>true</code>。</p>
+<p>与上面相同的模板文件，带有json 输出格式的 <code>permalinkable</code> 设置为 true：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>{{ .RelPermalink }} &gt; /that-page/index.json
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>{{ with  .OutputFormats.Get "html" -}}
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>{{ .RelPermalink }} &gt; /that-page/
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>{{- end }}
+</code></pre></div>
+<p>​   从内容文件中，您可以使用 <a href="https://gohugo.io/content-management/shortcodes/#ref-and-relref"><code>ref</code> 或 <code>relref</code> 简码</a>：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>[Neat]({{&lt; ref "blog/neat.md" "amp" &gt;}})
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>[Who]({{&lt; relref "about.md#who" "amp" &gt;}})
+</code></pre></div>
+<h2 id="_9">您的输出格式模板<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h2>
+<p>​   一个新的输出格式需要一个相应的模板才能渲染任何有用的内容。</p>
+<p>​   对于 Hugo 0.20 及更高版本的关键区别在于，Hugo 查看输出格式的 <code>Name</code> 和 MediaType 的 <code>Suffixes</code>，以选择用于渲染给定 <code>Page</code> 的模板。</p>
+<p>​   以下表格显示了不同输出格式的示例、所使用的后缀以及 Hugo 的模板<a href="https://gohugo.io/templates/lookup-order/">查找顺序</a>。表格中的所有示例都可以：</p>
+<ul>
+<li>使用<a href="https://gohugo.io/templates/base/">基础模板</a>。 </li>
+<li>包含<a href="https://gohugo.io/templates/partials/">局部模板</a>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Example</th>
+<th align="left">OutputFormat</th>
+<th align="left">Suffix</th>
+<th align="left">Template Lookup Order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">"posts" 章节的单个页面</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/single.html.html layouts/posts/single.html layouts/_default/single.html.html layouts/_default/single.html]</td>
+</tr>
+<tr>
+<td align="left">"posts" 章节的单个页面基础模板</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/single-baseof.html.html layouts/posts/baseof.html.html layouts/posts/single-baseof.html layouts/posts/baseof.html layouts/_default/single-baseof.html.html layouts/_default/baseof.html.html layouts/_default/single-baseof.html layouts/_default/baseof.html]</td>
+</tr>
+<tr>
+<td align="left">Single page in "posts" section with layout set</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/demolayout.html.html layouts/posts/single.html.html layouts/posts/demolayout.html layouts/posts/single.html layouts/_default/demolayout.html.html layouts/_default/single.html.html layouts/_default/demolayout.html layouts/_default/single.html]</td>
+</tr>
+<tr>
+<td align="left">Base template for single page in "posts" section with layout set</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/demolayout-baseof.html.html layouts/posts/single-baseof.html.html layouts/posts/baseof.html.html layouts/posts/demolayout-baseof.html layouts/posts/single-baseof.html layouts/posts/baseof.html layouts/_default/demolayout-baseof.html.html layouts/_default/single-baseof.html.html layouts/_default/baseof.html.html layouts/_default/demolayout-baseof.html layouts/_default/single-baseof.html layouts/_default/baseof.html]</td>
+</tr>
+<tr>
+<td align="left">AMP single page</td>
+<td align="left">AMP</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/single.amp.html layouts/posts/single.html layouts/_default/single.amp.html layouts/_default/single.html]</td>
+</tr>
+<tr>
+<td align="left">AMP single page, French language</td>
+<td align="left">AMP</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/single.fr.amp.html layouts/posts/single.amp.html layouts/posts/single.fr.html layouts/posts/single.html layouts/_default/single.fr.amp.html layouts/_default/single.amp.html layouts/_default/single.fr.html layouts/_default/single.html]</td>
+</tr>
+<tr>
+<td align="left">Home page</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/index.html.html layouts/home.html.html layouts/list.html.html layouts/index.html layouts/home.html layouts/list.html layouts/_default/index.html.html layouts/_default/home.html.html layouts/_default/list.html.html layouts/_default/index.html layouts/_default/home.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Base template for home page</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/index-baseof.html.html layouts/home-baseof.html.html layouts/list-baseof.html.html layouts/baseof.html.html layouts/index-baseof.html layouts/home-baseof.html layouts/list-baseof.html layouts/baseof.html layouts/_default/index-baseof.html.html layouts/_default/home-baseof.html.html layouts/_default/list-baseof.html.html layouts/_default/baseof.html.html layouts/_default/index-baseof.html layouts/_default/home-baseof.html layouts/_default/list-baseof.html layouts/_default/baseof.html]</td>
+</tr>
+<tr>
+<td align="left">Home page with type set</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/demotype/index.html.html layouts/demotype/home.html.html layouts/demotype/list.html.html layouts/demotype/index.html layouts/demotype/home.html layouts/demotype/list.html layouts/index.html.html layouts/home.html.html layouts/list.html.html layouts/index.html layouts/home.html layouts/list.html layouts/_default/index.html.html layouts/_default/home.html.html layouts/_default/list.html.html layouts/_default/index.html layouts/_default/home.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Base template for home page with type set</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/demotype/index-baseof.html.html layouts/demotype/home-baseof.html.html layouts/demotype/list-baseof.html.html layouts/demotype/baseof.html.html layouts/demotype/index-baseof.html layouts/demotype/home-baseof.html layouts/demotype/list-baseof.html layouts/demotype/baseof.html layouts/index-baseof.html.html layouts/home-baseof.html.html layouts/list-baseof.html.html layouts/baseof.html.html layouts/index-baseof.html layouts/home-baseof.html layouts/list-baseof.html layouts/baseof.html layouts/_default/index-baseof.html.html layouts/_default/home-baseof.html.html layouts/_default/list-baseof.html.html layouts/_default/baseof.html.html layouts/_default/index-baseof.html layouts/_default/home-baseof.html layouts/_default/list-baseof.html layouts/_default/baseof.html]</td>
+</tr>
+<tr>
+<td align="left">Home page with layout set</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/demolayout.html.html layouts/index.html.html layouts/home.html.html layouts/list.html.html layouts/demolayout.html layouts/index.html layouts/home.html layouts/list.html layouts/_default/demolayout.html.html layouts/_default/index.html.html layouts/_default/home.html.html layouts/_default/list.html.html layouts/_default/demolayout.html layouts/_default/index.html layouts/_default/home.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">AMP home, French language</td>
+<td align="left">AMP</td>
+<td align="left">html</td>
+<td align="left">[layouts/index.fr.amp.html layouts/home.fr.amp.html layouts/list.fr.amp.html layouts/index.amp.html layouts/home.amp.html layouts/list.amp.html layouts/index.fr.html layouts/home.fr.html layouts/list.fr.html layouts/index.html layouts/home.html layouts/list.html layouts/_default/index.fr.amp.html layouts/_default/home.fr.amp.html layouts/_default/list.fr.amp.html layouts/_default/index.amp.html layouts/_default/home.amp.html layouts/_default/list.amp.html layouts/_default/index.fr.html layouts/_default/home.fr.html layouts/_default/list.fr.html layouts/_default/index.html layouts/_default/home.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">JSON home</td>
+<td align="left">JSON</td>
+<td align="left">json</td>
+<td align="left">[layouts/index.json.json layouts/home.json.json layouts/list.json.json layouts/index.json layouts/home.json layouts/list.json layouts/_default/index.json.json layouts/_default/home.json.json layouts/_default/list.json.json layouts/_default/index.json layouts/_default/home.json layouts/_default/list.json]</td>
+</tr>
+<tr>
+<td align="left">RSS home</td>
+<td align="left">RSS</td>
+<td align="left">xml</td>
+<td align="left">[layouts/index.rss.xml layouts/home.rss.xml layouts/rss.xml layouts/list.rss.xml layouts/index.xml layouts/home.xml layouts/list.xml layouts/_default/index.rss.xml layouts/_default/home.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/index.xml layouts/_default/home.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+</tr>
+<tr>
+<td align="left">RSS section posts</td>
+<td align="left">RSS</td>
+<td align="left">xml</td>
+<td align="left">[layouts/posts/section.rss.xml layouts/posts/rss.xml layouts/posts/list.rss.xml layouts/posts/section.xml layouts/posts/list.xml layouts/section/section.rss.xml layouts/section/rss.xml layouts/section/list.rss.xml layouts/section/section.xml layouts/section/list.xml layouts/_default/section.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/section.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+</tr>
+<tr>
+<td align="left">Taxonomy in categories</td>
+<td align="left">RSS</td>
+<td align="left">xml</td>
+<td align="left">[layouts/categories/category.terms.rss.xml layouts/categories/terms.rss.xml layouts/categories/taxonomy.rss.xml layouts/categories/rss.xml layouts/categories/list.rss.xml layouts/categories/category.terms.xml layouts/categories/terms.xml layouts/categories/taxonomy.xml layouts/categories/list.xml layouts/category/category.terms.rss.xml layouts/category/terms.rss.xml layouts/category/taxonomy.rss.xml layouts/category/rss.xml layouts/category/list.rss.xml layouts/category/category.terms.xml layouts/category/terms.xml layouts/category/taxonomy.xml layouts/category/list.xml layouts/taxonomy/category.terms.rss.xml layouts/taxonomy/terms.rss.xml layouts/taxonomy/taxonomy.rss.xml layouts/taxonomy/rss.xml layouts/taxonomy/list.rss.xml layouts/taxonomy/category.terms.xml layouts/taxonomy/terms.xml layouts/taxonomy/taxonomy.xml layouts/taxonomy/list.xml layouts/_default/category.terms.rss.xml layouts/_default/terms.rss.xml layouts/_default/taxonomy.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/category.terms.xml layouts/_default/terms.xml layouts/_default/taxonomy.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+</tr>
+<tr>
+<td align="left">Term in categories</td>
+<td align="left">RSS</td>
+<td align="left">xml</td>
+<td align="left">[layouts/categories/term.rss.xml layouts/categories/category.rss.xml layouts/categories/taxonomy.rss.xml layouts/categories/rss.xml layouts/categories/list.rss.xml layouts/categories/term.xml layouts/categories/category.xml layouts/categories/taxonomy.xml layouts/categories/list.xml layouts/term/term.rss.xml layouts/term/category.rss.xml layouts/term/taxonomy.rss.xml layouts/term/rss.xml layouts/term/list.rss.xml layouts/term/term.xml layouts/term/category.xml layouts/term/taxonomy.xml layouts/term/list.xml layouts/taxonomy/term.rss.xml layouts/taxonomy/category.rss.xml layouts/taxonomy/taxonomy.rss.xml layouts/taxonomy/rss.xml layouts/taxonomy/list.rss.xml layouts/taxonomy/term.xml layouts/taxonomy/category.xml layouts/taxonomy/taxonomy.xml layouts/taxonomy/list.xml layouts/category/term.rss.xml layouts/category/category.rss.xml layouts/category/taxonomy.rss.xml layouts/category/rss.xml layouts/category/list.rss.xml layouts/category/term.xml layouts/category/category.xml layouts/category/taxonomy.xml layouts/category/list.xml layouts/_default/term.rss.xml layouts/_default/category.rss.xml layouts/_default/taxonomy.rss.xml layouts/_default/rss.xml layouts/_default/list.rss.xml layouts/_default/term.xml layouts/_default/category.xml layouts/_default/taxonomy.xml layouts/_default/list.xml layouts/_internal/_default/rss.xml]</td>
+</tr>
+<tr>
+<td align="left">Section list for "posts" section</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/posts.html.html layouts/posts/section.html.html layouts/posts/list.html.html layouts/posts/posts.html layouts/posts/section.html layouts/posts/list.html layouts/section/posts.html.html layouts/section/section.html.html layouts/section/list.html.html layouts/section/posts.html layouts/section/section.html layouts/section/list.html layouts/_default/posts.html.html layouts/_default/section.html.html layouts/_default/list.html.html layouts/_default/posts.html layouts/_default/section.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Section list for "posts" section with type set to "blog"</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/blog/posts.html.html layouts/blog/section.html.html layouts/blog/list.html.html layouts/blog/posts.html layouts/blog/section.html layouts/blog/list.html layouts/posts/posts.html.html layouts/posts/section.html.html layouts/posts/list.html.html layouts/posts/posts.html layouts/posts/section.html layouts/posts/list.html layouts/section/posts.html.html layouts/section/section.html.html layouts/section/list.html.html layouts/section/posts.html layouts/section/section.html layouts/section/list.html layouts/_default/posts.html.html layouts/_default/section.html.html layouts/_default/list.html.html layouts/_default/posts.html layouts/_default/section.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Section list for "posts" section with layout set to "demoLayout"</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/posts/demolayout.html.html layouts/posts/posts.html.html layouts/posts/section.html.html layouts/posts/list.html.html layouts/posts/demolayout.html layouts/posts/posts.html layouts/posts/section.html layouts/posts/list.html layouts/section/demolayout.html.html layouts/section/posts.html.html layouts/section/section.html.html layouts/section/list.html.html layouts/section/demolayout.html layouts/section/posts.html layouts/section/section.html layouts/section/list.html layouts/_default/demolayout.html.html layouts/_default/posts.html.html layouts/_default/section.html.html layouts/_default/list.html.html layouts/_default/demolayout.html layouts/_default/posts.html layouts/_default/section.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Taxonomy list in categories</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/categories/category.terms.html.html layouts/categories/terms.html.html layouts/categories/taxonomy.html.html layouts/categories/list.html.html layouts/categories/category.terms.html layouts/categories/terms.html layouts/categories/taxonomy.html layouts/categories/list.html layouts/category/category.terms.html.html layouts/category/terms.html.html layouts/category/taxonomy.html.html layouts/category/list.html.html layouts/category/category.terms.html layouts/category/terms.html layouts/category/taxonomy.html layouts/category/list.html layouts/taxonomy/category.terms.html.html layouts/taxonomy/terms.html.html layouts/taxonomy/taxonomy.html.html layouts/taxonomy/list.html.html layouts/taxonomy/category.terms.html layouts/taxonomy/terms.html layouts/taxonomy/taxonomy.html layouts/taxonomy/list.html layouts/_default/category.terms.html.html layouts/_default/terms.html.html layouts/_default/taxonomy.html.html layouts/_default/list.html.html layouts/_default/category.terms.html layouts/_default/terms.html layouts/_default/taxonomy.html layouts/_default/list.html]</td>
+</tr>
+<tr>
+<td align="left">Taxonomy term in categories</td>
+<td align="left">HTML</td>
+<td align="left">html</td>
+<td align="left">[layouts/categories/term.html.html layouts/categories/category.html.html layouts/categories/taxonomy.html.html layouts/categories/list.html.html layouts/categories/term.html layouts/categories/category.html layouts/categories/taxonomy.html layouts/categories/list.html layouts/term/term.html.html layouts/term/category.html.html layouts/term/taxonomy.html.html layouts/term/list.html.html layouts/term/term.html layouts/term/category.html layouts/term/taxonomy.html layouts/term/list.html layouts/taxonomy/term.html.html layouts/taxonomy/category.html.html layouts/taxonomy/taxonomy.html.html layouts/taxonomy/list.html.html layouts/taxonomy/term.html layouts/taxonomy/category.html layouts/taxonomy/taxonomy.html layouts/taxonomy/list.html layouts/category/term.html.html layouts/category/category.html.html layouts/category/taxonomy.html.html layouts/category/list.html.html layouts/category/term.html layouts/category/category.html layouts/category/taxonomy.html layouts/category/list.html layouts/_default/term.html.html layouts/_default/category.html.html layouts/_default/taxonomy.html.html layouts/_default/list.html.html layouts/_default/term.html layouts/_default/category.html layouts/_default/taxonomy.html layouts/_default/list.html]</td>
+</tr>
+</tbody>
+</table>
+<p>​   Hugo 现在还可以检测 partials 的媒体类型和输出格式（如果可能的话），并使用这些信息来决定是否将 partial 解析为纯文本模板。</p>
+<p>​   Hugo将查找给定的名称，因此您可以根据需要随意命名它。但是，如果要将其视为纯文本，请使用文件后缀，如果需要，还要使用输出格式的名称。 模式如下：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>[partial name].[OutputFormat].[suffix]
+</code></pre></div>
+<p>​   以下 partial 是一个纯文本模板（输出格式为 <code>CSV</code>，由于这是唯一带有后缀 <code>csv</code> 的输出格式，因此我们不需要包含输出格式的<code>Name</code>）：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>{{ partial "mytextpartial.csv" . }}
+</code></pre></div>
+<h2 id="_10">另请参阅<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><a href="https://gohugo.io/templates/lists/">Hugo中的内容列表 </a></li>
+<li><a href="https://gohugo.io/templates/rss/">RSS模板</a></li>
+</ul>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Hugo 的查找顺序" class="md-footer__link md-footer__link--prev" href="../TemplateLookupOrder/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Hugo 的查找顺序
+            </div>
+</div>
+</a>
+<a aria-label="Next: 基础模板和块" class="md-footer__link md-footer__link--next" href="../BaseTemplatesAndBlocks/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              基础模板和块
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "content.tabs.link", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="../../javascripts/tex-mml-chtml.js"></script>
+<script src="../../javascripts/deal-zero-width-space.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

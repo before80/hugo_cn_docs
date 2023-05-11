@@ -1,0 +1,3221 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.1, mkdocs-material-8.5.8" name="generator"/>
+<title>多语言模式 - Hugo 中文文档集</title>
+<link href="../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#multilingual-mode-">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hugo 中文文档集" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hugo 中文文档集
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              多语言模式
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hugo 中文文档集" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Hugo 中文文档集">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Hugo 中文文档集
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        首页
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../AboutHugo/">关于Hugo</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="关于Hugo" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          关于Hugo
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugosSecurityModel/">
+        Hugo 的安全模型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoAndGDPR/">
+        Hugo and GDPR
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/WhatIsHugo/">
+        什么是 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/HugoFeatures/">
+        Hugo特性
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/TheBenefitsOfStatic/">
+        静态网站生成器的好处
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../AboutHugo/License/">
+        License
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Installation/">安装</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="安装" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          安装
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/MacOS/">
+        macOS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Linux/">
+        Linux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/Windows/">
+        Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Installation/BSD/">
+        BSD
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../GettingStarted/">开始入门</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="开始入门" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          开始入门
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/QuickStart/">
+        快速入门
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/BasicUsage/">
+        基础用法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/DirectoryStructure/">
+        目录结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/Configuration/">
+        配置 Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ConfigurationMarkup/">
+        配置Markup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GettingStarted/ExternalLearningResources/">
+        外部学习资源
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoModules/">Hugo 模块</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo 模块" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Hugo 模块
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ConfigureModules/">
+        配置模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/UseHugoModules/">
+        使用 Hugo 模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoModules/ThemeComponents/">
+        主题组件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">内容管理</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="内容管理" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          内容管理
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Organization/">
+        内容组织
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PageBundles/">
+        页面Bundles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ContentFormats/">
+        内容格式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Diagrams/">
+        图表
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../FrontMatter/">
+        前置元数据
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../BuildOptions/">
+        构建选项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../PageResources/">
+        页面资源
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ImageProcessing/">
+        图像处理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Shortcodes/">
+        简码
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RelatedContent/">
+        相关内容
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Sections/">
+        内容章节
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ContentTypes/">
+        内容类型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Archetypes/">
+        原型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Taxonomies/">
+        分类法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Summaries/">
+        内容摘要
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinksAndCrossReferences/">
+        链接和交叉引用
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../URLManagement/">
+        URL管理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Menus/">
+        菜单
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../StaticFiles/">
+        静态文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TableOfContents/">
+        目录
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Comments/">
+        评论
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          多语言模式
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        多语言模式
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    配置语言
+  </a>
+<nav aria-label="配置语言" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    禁用语言
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multihost">
+    配置多语言Multihost
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    翻译您的内容
+  </a>
+<nav aria-label="翻译您的内容" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    按文件名翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    按内容目录翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    绕过默认链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    本地化永久链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bundles">
+    页面 Bundles
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    引用翻译内容
+  </a>
+<nav aria-label="引用翻译内容" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    列出所有可用语言
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    字符串翻译
+  </a>
+<nav aria-label="字符串翻译" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    查询基本翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    查询带有变量的灵活翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    查询单数/复数翻译
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    本地化
+  </a>
+<nav aria-label="本地化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    日期
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#currency">
+    货币 Currency
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    数字
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    百分数
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    菜单
+  </a>
+<nav aria-label="菜单" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    使用翻译表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    创建语言特定的菜单条目
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    缺少翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    多语言主题支持
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hugo-new">
+    使用 hugo new 生成多语言内容
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SyntaxHighlighting/">
+        语法高亮
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Templ/">模板</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="模板" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          模板
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/Templating/">
+        Hugo模板入门介绍
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/TemplateLookupOrder/">
+        Hugo 的查找顺序
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/CustomOutputFormats/">
+        自定义输出格式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/BaseTemplatesAndBlocks/">
+        基础模板和块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/RenderHooks/">
+        Markdown渲染钩子
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/ListTemplates/">
+        列表模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/HomepageTemplate/">
+        主页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/SectionTemplates/">
+        章节页面模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/TaxonomyTemplates/">
+        分类模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/SinglePageTemplates/">
+        单页模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/ContentViewTemplates/">
+        内容视图模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/DataTemplates/">
+        数据模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/PartialTemplates/">
+        局部模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/ShortcodeTemplates/">
+        简码模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/LocalFileTemplates/">
+        本地文件模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/404Page/">
+        404页面
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/MenuTemplates/">
+        菜单模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/Pagination/">
+        分页
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/RSSTemplates/">
+        RSS模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/SitemapTemplates/">
+        Sitemap模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/Robots_txt/">
+        Robots.txt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/InternalTemplates/">
+        内置模板
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Templ/TemplateDebugging/">
+        模板调试
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8">
+          函数
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="函数" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          函数
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FunctionsQuickReference/">
+        Functions Quick Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_AddDate/">
+        .AddDate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Format/">
+        .Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Get/">
+        .Get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_GetPage/">
+        .GetPage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_HasMenuCurrent/">
+        .HasMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_IsMenuCurrent/">
+        .IsMenuCurrent
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Param/">
+        .Param
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Render/">
+        .Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_RenderString/">
+        .RenderString
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Scratch/">
+        .Scratch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Store/">
+        .Store
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/_Unix/">
+        .Unix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsLangURL/">
+        absLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/AbsURL/">
+        absURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/After/">
+        after
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Anchorize/">
+        anchorize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Append/">
+        append
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Apply/">
+        apply
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Base64/">
+        base64
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Chomp/">
+        chomp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Complement/">
+        complement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Cond/">
+        cond
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countrunes/">
+        countrunes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Countwords/">
+        countwords
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Crypto_FNV32a/">
+        crypto.FNV32a
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Default/">
+        default
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Delimit/">
+        delimit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Dict/">
+        dict
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Duration/">
+        duration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/EchoParam/">
+        echoParam
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Emojify/">
+        emojify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Eq/">
+        eq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ErrorfAndWarnf/">
+        errorf and warnf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FileExists/">
+        fileExists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRE/">
+        findRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/FindRESubmatch/">
+        findRESubmatch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/First/">
+        first
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Float/">
+        float
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ge/">
+        ge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Getenv/">
+        getenv
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Group/">
+        group
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Gt/">
+        gt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Highlight/">
+        highlight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hmac/">
+        hmac
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlEscape/">
+        htmlEscape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/HtmlUnescape/">
+        htmlUnescape
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Humanize/">
+        humanize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/I18n/">
+        i18n
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ImageFilters/">
+        Image Filters
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/In/">
+        in
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Index/">
+        index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Int/">
+        int
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Intersect/">
+        intersect
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Isset/">
+        isset
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Jsonify/">
+        jsonify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang/">
+        lang
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lang_Merge/">
+        lang.Merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Last/">
+        last
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Le/">
+        le
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Len/">
+        len
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lower/">
+        lower
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Lt/">
+        lt
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Markdownify/">
+        markdownify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Math/">
+        Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Md5/">
+        md5
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Merge/">
+        merge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ne/">
+        ne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Now/">
+        now
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Os_Stat/">
+        os.Stat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/PartialCached/">
+        partialCached
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Base/">
+        path.Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_BaseName/">
+        path.BaseName
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Clean/">
+        path.Clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Dir/">
+        path.Dir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Ext/">
+        path.Ext
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Join/">
+        path.Join
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Path_Split/">
+        path.Split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Plainify/">
+        plainify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Pluralize/">
+        pluralize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Print/">
+        print
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Printf/">
+        printf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Println/">
+        println
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Querify/">
+        querify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Range/">
+        range
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadDir/">
+        readDir
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReadFile/">
+        readFile
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Ref/">
+        ref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsMap/">
+        reflect.IsMap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Reflect_IsSlice/">
+        reflect.IsSlice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelLangURL/">
+        relLangURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Relref/">
+        relref
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/RelURL/">
+        relURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Replace/">
+        replace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/ReplaceRE/">
+        replaceRE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeCSS/">
+        safeCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTML/">
+        safeHTML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeHTMLAttr/">
+        safeHTMLAttr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeJS/">
+        safeJS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/SafeURL/">
+        safeURL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Seq/">
+        seq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sha/">
+        sha
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Shuffle/">
+        shuffle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Singularize/">
+        singularize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Site/">
+        site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slice/">
+        slice
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Slicestr/">
+        slicestr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Sort/">
+        sort
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Split/">
+        split
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/String/">
+        string
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Contains/">
+        strings.Contains
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_ContainsAny/">
+        strings.ContainsAny
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Count/">
+        strings.Count
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_FirstUpper/">
+        strings.FirstUpper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasPrefix/">
+        strings.HasPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_HasSuffix/">
+        strings.HasSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_Repeat/">
+        strings.Repeat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_RuneCount/">
+        strings.RuneCount
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimLeft/">
+        strings.TrimLeft
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimPrefix/">
+        strings.TrimPrefix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimRight/">
+        strings.TrimRight
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Strings_TrimSuffix/">
+        strings.TrimSuffix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Substr/">
+        substr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Symdiff/">
+        symdiff
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Templates_Exists/">
+        templates.Exists
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time/">
+        time
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_Format/">
+        time.Format
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Time_ParseDuration/">
+        time.ParseDuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Title/">
+        title
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Transform_Unmarshal/">
+        transform.Unmarshal
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Trim/">
+        trim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Truncate/">
+        truncate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Union/">
+        union
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Uniq/">
+        uniq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Upper/">
+        upper
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlize/">
+        urlize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urlquery/">
+        urlquery
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Urls_Parse/">
+        urls.Parse
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/Where/">
+        where
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Functions/With/">
+        with
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Variables/">变量</a>
+<label for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="变量" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          变量
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SiteVariables/">
+        站点变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PageVariables/">
+        页面变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/ShortcodeVariables/">
+        简码变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/PagesMethods/">
+        页面方法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/TaxonomyVariables/">
+        分类变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/FileVariables/">
+        文件变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/MenuVariables/">
+        菜单变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/GitVariables/">
+        Git 信息变量
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Variables/SitemapVariables/">
+        Sitemap变量
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HugoPipes/">Hugo Pipes</a>
+<label for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hugo Pipes" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Hugo Pipes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/HugoPipes/">
+        Hugo Pipes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/TranspileSassToSCSS/">
+        Transpile Sass to SCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostProcess/">
+        PostProcess
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/PostCSS/">
+        PostCSS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/JavaScriptBuilding/">
+        JavaScript Building
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/Babel/">
+        Babel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/AssetMinification/">
+        Asset minification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ConcatenatingAssets/">
+        Concatenating assets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/FingerprintingAndSRI/">
+        Fingerprinting and SRI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromTemplate/">
+        Resource from Template
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HugoPipes/ResourceFromString/">
+        Resource from String
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_11">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="CLI" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/Hugo/">
+        hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletion/">
+        hugo completion
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionBash/">
+        hugo completion bash
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionFish/">
+        hugo completion fish
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionPowershell/">
+        hugo completion powershell
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoCompletionZsh/">
+        hugo completion zsh
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfig/">
+        hugo config
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConfigMounts/">
+        hugo config mounts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvert/">
+        hugo convert
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToJSON/">
+        hugo convert toJSON
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToTOML/">
+        hugo convert toTOML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoConvertToYAML/">
+        hugo convert toYAML
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoDeploy/">
+        hugo deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoEnv/">
+        hugo env
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGen/">
+        hugo gen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenChromastyles/">
+        hugo gen chromastyles
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenDoc/">
+        hugo gen doc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoGenMan/">
+        hugo gen man
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImport/">
+        hugo import
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoImportJekyll/">
+        hugo import jekyll
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoList/">
+        hugo list
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListAll/">
+        hugo list all
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListDrafts/">
+        hugo list drafts
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListExpired/">
+        hugo list expired
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoListFuture/">
+        hugo list future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoMod/">
+        hugo mod
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModClean/">
+        hugo mod clean
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGet/">
+        hugo mod get
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModGraph/">
+        hugo mod graph
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModInit/">
+        hugo mod init
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpm/">
+        hugo mod npm
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModNpmPack/">
+        hugo mod npm pack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModTidy/">
+        hugo mod tidy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVendor/">
+        hugo mod vendor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoModVerify/">
+        hugo mod verify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNew/">
+        hugo new
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewSite/">
+        hugo new site
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoNewTheme/">
+        hugo new theme
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoServer/">
+        hugo server
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../CLI/HugoVersion/">
+        hugo version
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_12">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Troubleshooting" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/Troubleshoot.md">
+        Troubleshoot
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/FAQ/">
+        FAQ
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Troubleshooting/BuildPerformance/">
+        Build Performance
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../Tools/">工具</a>
+<label for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="工具" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Migrations/">
+        Migrations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/StarterKits/">
+        Starter Kits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Frontends/">
+        Frontends
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/EditorPlug-ins/">
+        Editor Plug-ins
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/Search/">
+        Search
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tools/OtherProjects/">
+        Other Projects
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../HostingDeployment/">Hosting &amp; Deployment</a>
+<label for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Hosting &amp; Deployment" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          Hosting &amp; Deployment
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HugoDeploy/">
+        Hugo Deploy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOn21YunBox/">
+        Host on 21YunBox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAWSAmplify/">
+        Host on AWS Amplify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnAzureStaticWebApps/">
+        Host on Azure Static Web Apps
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnNetlify/">
+        Host on Netlify
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnRender/">
+        Host on Render
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnFirebase/">
+        Host on Firebase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitHub/">
+        Host on GitHub
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnGitLab/">
+        Host on GitLab
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnKeyCDN/">
+        Host on KeyCDN
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostOnCloudflarePages/">
+        Host on Cloudflare Pages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRsync/">
+        Deployment with Rsync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/DeploymentWithRclone/">
+        Deployment with Rclone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HostingDeployment/HostingOnAzureStaticWebApps/">
+        Hosting on Azure Static Web Apps
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_15">
+          贡献
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="贡献" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          贡献
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/ContributeToHugo/">
+        Contribute to Hugo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Development/">
+        Development
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Documentation/">
+        Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Contribute/Themes/">
+        Themes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    配置语言
+  </a>
+<nav aria-label="配置语言" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    禁用语言
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multihost">
+    配置多语言Multihost
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    翻译您的内容
+  </a>
+<nav aria-label="翻译您的内容" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    按文件名翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    按内容目录翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    绕过默认链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    本地化永久链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bundles">
+    页面 Bundles
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    引用翻译内容
+  </a>
+<nav aria-label="引用翻译内容" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    列出所有可用语言
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    字符串翻译
+  </a>
+<nav aria-label="字符串翻译" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    查询基本翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    查询带有变量的灵活翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    查询单数/复数翻译
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    本地化
+  </a>
+<nav aria-label="本地化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    日期
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#currency">
+    货币 Currency
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    数字
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    百分数
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    菜单
+  </a>
+<nav aria-label="菜单" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    使用翻译表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    创建语言特定的菜单条目
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    缺少翻译
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    多语言主题支持
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hugo-new">
+    使用 hugo new 生成多语言内容
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    另请参阅
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="multilingual-mode-">Multilingual Mode - 多语言模式<a class="headerlink" href="#multilingual-mode-" title="Permanent link">⚓︎</a></h1>
+<p><a href="https://gohugo.io/content-management/multilingual/">https://gohugo.io/content-management/multilingual/</a></p>
+<p>​   Hugo支持创建并排展示多种语言的站点。</p>
+<p>​   您应该在站点配置中的<code>languages</code>部分定义可用的语言。</p>
+<p>​   另请参阅<a href="https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/">Hugo多语言第一部分：内容翻译</a>。</p>
+<h2 id="_1">配置语言<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p>​   以下是多语言Hugo项目的站点配置示例：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">yaml</label><label for="__tabbed_1_2">toml</label><label for="__tabbed_1_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">copyright</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Everything is mine</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span><span class="w"></span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">languages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">ar</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">languagedirection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rtl</span><span class="w"></span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">مدونتي</span><span class="w"></span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">      </span><span class="nt">linkedin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://linkedin.com/whoever</span><span class="w"></span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My blog</span><span class="w"></span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="nt">fr</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">      </span><span class="nt">linkedin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://linkedin.com/fr/whoever</span><span class="w"></span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="nt">navigation</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="nt">help</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aide</span><span class="w"></span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mon blogue</span><span class="w"></span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="nt">pt-pt</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">O meu blog</span><span class="w"></span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nt">params</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="nt">navigation</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="nt">help</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Help</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">copyright</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Everything is mine'</span><span class="w"></span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">defaultContentLanguage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'en'</span><span class="w"></span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">[languages]</span><span class="w"></span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="k">[languages.ar]</span><span class="w"></span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">languagedirection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'rtl'</span><span class="w"></span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'مدونتي'</span><span class="w"></span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="k">[languages.en]</span><span class="w"></span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'My blog'</span><span class="w"></span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="k">[languages.en.params]</span><span class="w"></span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">      </span><span class="n">linkedin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'https://linkedin.com/whoever'</span><span class="w"></span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">  </span><span class="k">[languages.fr]</span><span class="w"></span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Mon blogue'</span><span class="w"></span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="k">[languages.fr.params]</span><span class="w"></span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">      </span><span class="n">linkedin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'https://linkedin.com/fr/whoever'</span><span class="w"></span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">      </span><span class="k">[languages.fr.params.navigation]</span><span class="w"></span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="n">help</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Aide'</span><span class="w"></span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">  </span><span class="k">[languages.pt-pt]</span><span class="w"></span>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'O meu blog'</span><span class="w"></span>
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="k">[params]</span><span class="w"></span>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">  </span><span class="k">[params.navigation]</span><span class="w"></span>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="n">help</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Help'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="nt">"copyright"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Everything is mine"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">   </span><span class="nt">"defaultContentLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">   </span><span class="nt">"languages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="nt">"ar"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">         </span><span class="nt">"languagedirection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rtl"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"مدونتي"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">         </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">            </span><span class="nt">"linkedin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://linkedin.com/whoever"</span><span class="w"></span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">         </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My blog"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">      </span><span class="nt">"fr"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">         </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="nt">"linkedin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://linkedin.com/fr/whoever"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">            </span><span class="nt">"navigation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">               </span><span class="nt">"help"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aide"</span><span class="w"></span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">         </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mon blogue"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">      </span><span class="nt">"pt-pt"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O meu blog"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">   </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">   </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">      </span><span class="nt">"navigation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">         </span><span class="nt">"help"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Help"</span><span class="w"></span>
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   任何未在<code>languages</code>块中定义的内容都将回退到该键的全局值（例如英语<code>en</code>语言的<code>copyright</code>）。这也适用于<code>params</code>，如上面的示例所示：您将在法语中获得<code>Aide</code>的值，并在所有没有设置此参数的语言中获得<code>Help</code>。</p>
+<p>​   使用上述配置，所有内容、站点地图、RSS源、分页和分类页将在英语（默认内容语言）下的<code>/</code>目录下渲染，然后在法语的<code>/fr</code>目录下渲染。</p>
+<p>​   在<a href="https://gohugo.io/templates/single-page-templates/">单页模板</a>中使用前置元数据 <code>Params</code>时，忽略翻译的键中的<code>params</code>。</p>
+<p>​   <code>defaultContentLanguage</code>设置项目的默认语言。如果未设置，则默认语言为<code>en</code>。</p>
+<p>​   如果需要将默认语言渲染在其自己的语言代码（<code>/en</code>）下，像其他语言一样，请设置<code>defaultContentLanguageInSubdir：true</code>。</p>
+<p>​   只有明显的非全局选项可以按语言覆盖。全局选项的示例包括<code>baseURL</code>、<code>buildDrafts</code>等。</p>
+<p>请注意：使用小写语言代码，即使是使用区域性语言（例如使用pt-pt而不是pt-PT）。当前Hugo语言内部将语言代码转换为小写字母，这可能会与未转换为小写字母的<code>defaultContentLanguage</code>等设置发生冲突。请在<a href="https://github.com/gohugoio/hugo/issues/7344">Hugo存储库问题跟踪器</a>中跟踪此问题的演变。</p>
+<h3 id="_2">禁用语言<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
+<p>​   您可以禁用一个或多个语言。这在进行新翻译时非常有用。</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">yaml</label><label for="__tabbed_2_2">toml</label><label for="__tabbed_2_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">disableLanguages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fr</span><span class="w"></span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ja</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">disableLanguages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">'fr'</span><span class="p">,</span><span class="w"> </span><span class="s">'ja'</span><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">   </span><span class="nt">"disableLanguages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">      </span><span class="s2">"fr"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">      </span><span class="s2">"ja"</span><span class="w"></span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">   </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   请注意，您不能禁用默认内容语言。</p>
+<p>​   我们将其保留为一个独立的设置，以便更容易通过<a href="https://gohugo.io/getting-started/configuration/#configure-with-environment-variables">操作系统环境</a>进行设置：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nv">HUGO_DISABLELANGUAGES</span><span class="o">=</span><span class="s2">"fr ja"</span> hugo
+</code></pre></div>
+<p>​   如果您已经在<code>config.toml</code>中有禁用的语言列表，可以像这样在开发环境中启用它们：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nv">HUGO_DISABLELANGUAGES</span><span class="o">=</span><span class="s2">" "</span> hugo server
+</code></pre></div>
+<h3 id="multihost">配置多语言Multihost<a class="headerlink" href="#multihost" title="Permanent link">⚓︎</a></h3>
+<p>​   从Hugo 0.31开始，我们支持多语言multihost配置。详见<a href="https://github.com/gohugoio/hugo/issues/4027">此问题</a>的说明。</p>
+<p>​   这意味着现在可以为每种<code>language</code>配置一个<code>baseURL</code>：</p>
+<blockquote>
+<p>如果在<code>language</code>级别上设置了 <code>baseURL</code>，则所有语言都必须具有一个，且它们必须全部不同。</p>
+</blockquote>
+<p>例如：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">yaml</label><label for="__tabbed_3_2">toml</label><label for="__tabbed_3_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nt">languages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.com</span><span class="w"></span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">English</span><span class="w"></span>
+<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In English</span><span class="w"></span>
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="nt">fr</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://example.fr</span><span class="w"></span>
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Français</span><span class="w"></span>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">En Français</span><span class="w"></span>
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">[languages]</span><span class="w"></span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="k">[languages.en]</span><span class="w"></span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="n">baseURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'https://example.com'</span><span class="w"></span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'English'</span><span class="w"></span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'In English'</span><span class="w"></span>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="k">[languages.fr]</span><span class="w"></span>
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="n">baseURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'https://example.fr'</span><span class="w"></span>
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Français'</span><span class="w"></span>
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'En Français'</span><span class="w"></span>
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">   </span><span class="nt">"languages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">      </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">         </span><span class="nt">"baseURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"In English"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">      </span><span class="nt">"fr"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">         </span><span class="nt">"baseURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.fr"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Français"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"En Français"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   有了上面的配置，这两个站点将生成到带有自己根目录的 <code>public</code> 中：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>public
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>├── en
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>└── fr
+</code></pre></div>
+<p>​   所有的URL（例如<code>.Permalink</code>等）都将从该根目录生成。因此，上面的英文主页的<code>.Permalink</code>将设置为https://example.com/。</p>
+<p>​   当您运行<code>hugo server</code>时，我们将启动多个HTTP服务器。您通常会在控制台中看到以下内容：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>Web Server is available at 127.0.0.1:1313 (bind address 127.0.0.1)
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>Web Server is available at 127.0.0.1:1314 (bind address 127.0.0.1)
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>Press Ctrl+C to stop
+</code></pre></div>
+<p>​   实时重新加载和在服务器之间使用<code>--navigateToChanged</code>会按预期工作。</p>
+<h2 id="_3">翻译您的内容<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<p>​   有两种管理内容翻译的方式。两种方式都可以确保每个页面都被分配了一种语言，并与其对应的翻译链接在一起。</p>
+<h3 id="_4">按文件名翻译<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
+<p>​   考虑以下示例：</p>
+<ol>
+<li><code>/content/about.en.md</code></li>
+<li><code>/content/about.fr.md</code></li>
+</ol>
+<p>​   第一个文件分配了英语语言，并链接到第二个文件。第二个文件分配了法语语言，并链接到第一个文件。</p>
+<p>​   它们的语言是根据文件名后缀添加的语言代码分配的。</p>
+<p>​   通过具有相同的路径和基本文件名，将内容部分链接在一起作为翻译页面。</p>
+<p>​   如果文件没有语言代码，它将被分配为默认语言。</p>
+<h3 id="_5">按内容目录翻译<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h3>
+<p>​   该系统使用不同的内容目录来处理每种语言。每种语言的内容目录都是使用 <code>contentDir</code> 参数设置的。</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">yaml</label><label for="__tabbed_4_2">toml</label><label for="__tabbed_4_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nt">languages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/english</span><span class="w"></span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">English</span><span class="w"></span>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">  </span><span class="nt">fr</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/french</span><span class="w"></span>
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Français</span><span class="w"></span>
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">[languages]</span><span class="w"></span>
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="k">[languages.en]</span><span class="w"></span>
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="n">contentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'content/english'</span><span class="w"></span>
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'English'</span><span class="w"></span>
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">  </span><span class="k">[languages.fr]</span><span class="w"></span>
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="n">contentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'content/french'</span><span class="w"></span>
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Français'</span><span class="w"></span>
+<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">   </span><span class="nt">"languages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">      </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">         </span><span class="nt">"contentDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/english"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">      </span><span class="nt">"fr"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">         </span><span class="nt">"contentDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/french"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Français"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   <code>contentDir</code> 的值可以是任何有效的路径，甚至是绝对路径引用。唯一的限制是内容目录不能重叠。</p>
+<p>​   考虑以下示例与上述配置一起使用：</p>
+<ol>
+<li><code>/content/english/about.md</code></li>
+<li><code>/content/french/about.md</code></li>
+</ol>
+<p>​   第一个文件被分配为英语，并与第二个文件链接。第二个文件被分配为法语，并与第一个文件链接。</p>
+<p>​   它们的语言是根据它们放置所在的内容目录分配的。</p>
+<p>​   通过具有相同的路径和基名（相对于其语言内容目录），内容片段将作为翻译页面相互链接。</p>
+<h3 id="_6">绕过默认链接<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
+<p>​   任何在前置元数据中设置相同翻译键（<code>translationKey</code>）的页面将被链接为翻译页面，而不考虑基名或位置。</p>
+<p>​   考虑以下示例：</p>
+<ol>
+<li><code>/content/about-us.en.md</code></li>
+<li><code>/content/om.nn.md</code></li>
+<li><code>/content/presentation/a-propos.fr.md</code></li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">yaml</label><label for="__tabbed_5_2">toml</label><label for="__tabbed_5_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nt">translationKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">about</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">translationKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'about'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">   </span><span class="nt">"translationKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"about"</span><span class="w"></span>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>​   通过在所有三个页面的前置元数据参数中设置翻译键（<code>translationKey</code>）为 <code>about</code>，它们将被链接为翻译页面。</p>
+<h3 id="_7">本地化永久链接<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
+<p>​   因为路径和文件名用于处理链接，所有翻译页面将共享相同的URL（除了语言子目录）。</p>
+<p>​   为了本地化URL：</p>
+<ul>
+<li>对于常规页面，在前置元数据中设置<code>slug</code>或<code>url</code> </li>
+<li>对于章节页面，在前置元数据中设置<code>url</code> </li>
+</ul>
+<p>​   例如，法语翻译可以有自己本地化的<code>slug</code>。</p>
+<p>content/about.fr.md</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">yaml</label><label for="__tabbed_6_2">toml</label><label for="__tabbed_6_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nn">---</span><span class="w"></span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a-propos</span><span class="w"></span>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Propos</span><span class="w"></span>
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="nn">---</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="err">+++</span><span class="w"></span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">slug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'a-propos'</span><span class="w"></span>
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'A Propos'</span><span class="w"></span>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="err">+++</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">   </span><span class="nt">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a-propos"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">   </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Propos"</span><span class="w"></span>
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></input></div>
+<p>At render, Hugo will build both <code>/about/</code> and <code>/fr/a-propos/</code> without affecting the translation link.</p>
+<p>​   在渲染时，Hugo将同时构建<code>/about/</code>和<code>/fr/a-propos/</code>，而不影响翻译链接。</p>
+<h3 id="bundles">页面 Bundles<a class="headerlink" href="#bundles" title="Permanent link">⚓︎</a></h3>
+<p>To avoid the burden of having to duplicate files, each Page Bundle inherits the resources of its linked translated pages’ bundles except for the content files (Markdown files, HTML files etc…).</p>
+<p>为了避免重复文件的负担，每个页面包继承其链接的翻译页面包的资源，除了内容文件（Markdown文件，HTML文件等）。</p>
+<p>Therefore, from within a template, the page will have access to the files from all linked pages’ bundles.</p>
+<p>因此，在模板内，页面将可以访问所有链接页面包的文件。</p>
+<p>If, across the linked bundles, two or more files share the same basename, only one will be included and chosen as follows:</p>
+<p>如果在链接的包中，两个或多个文件具有相同的基名，则只包括一个，并按以下方式选择：</p>
+<ul>
+<li>File from current language bundle, if present.</li>
+<li>当前语言包中的文件（如果存在）。 </li>
+<li>First file found across bundles by order of language <code>Weight</code>.</li>
+<li>按语言权重顺序在所有包中找到的第一个文件。 </li>
+</ul>
+<p>Page Bundle resources follow the same language assignment logic as content files, both by filename (<code>image.jpg</code>, <code>image.fr.jpg</code>) and by directory (<code>english/about/header.jpg</code>, <code>french/about/header.jpg</code>).</p>
+<p>页面包资源遵循与内容文件相同的语言分配逻辑，包括文件名（image.jpg，image.fr.jpg）和目录（english/about/header.jpg，french/about/header.jpg）。</p>
+<h2 id="_8">引用翻译内容<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h2>
+<p>To create a list of links to translated content, use a template similar to the following:</p>
+<p>要创建链接到翻译内容的链接列表，请使用类似以下的模板：</p>
+<p>layouts/partials/i18nlist.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>{{ if .IsTranslated }}
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>&lt;h4&gt;{{ i18n "translations" }}&lt;/h4&gt;
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>&lt;ul&gt;
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>  {{ range .Translations }}
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>  &lt;li&gt;
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a>    &lt;a href="{{ .Permalink }}"&gt;{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}&lt;/a&gt;
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a>  &lt;/li&gt;
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a>  {{ end }}
+<a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a>&lt;/ul&gt;
+<a href="#__codelineno-22-10" id="__codelineno-22-10" name="__codelineno-22-10"></a>{{ end }}
+</code></pre></div>
+<p>The above can be put in a <code>partial</code> (i.e., inside <code>layouts/partials/</code>) and included in any template, whether a <a href="https://gohugo.io/templates/single-page-templates/">single content page</a> or the <a href="https://gohugo.io/templates/homepage/">homepage</a>. It will not print anything if there are no translations for a given page.</p>
+<p>上述内容可以放在partial中（即layouts/partials/文件夹中），并包含在任何模板中，无论是单个内容页面还是主页。如果没有给定页面的翻译，它将不会打印任何内容。</p>
+<p>The above also uses the <a href="https://gohugo.io/functions/i18n/"><code>i18n</code> function</a> described in the next section.</p>
+<p>上述内容还使用了下一节中描述的i18n函数。</p>
+<h3 id="_9">列出所有可用语言<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
+<p><code>.AllTranslations</code> on a <code>Page</code> can be used to list all translations, including the page itself. On the home page it can be used to build a language navigator:</p>
+<p>在页面上使用.AllTranslations可以列出所有翻译，包括页面本身。在主页上，它可用于构建语言导航器：</p>
+<p>layouts/partials/allLanguages.html</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>&lt;ul&gt;
+<a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>{{ range $.Site.Home.AllTranslations }}
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>&lt;li&gt;&lt;a href="{{ .Permalink }}"&gt;{{ .Language.LanguageName }}&lt;/a&gt;&lt;/li&gt;
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>{{ end }}
+<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>&lt;/ul&gt;
+</code></pre></div>
+<h2 id="_10">字符串翻译<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h2>
+<p>Hugo uses <a href="https://github.com/nicksnyder/go-i18n">go-i18n</a> to support string translations. <a href="https://github.com/nicksnyder/go-i18n">See the project’s source repository</a> to find tools that will help you manage your translation workflows.</p>
+<p>Hugo使用go-i18n支持字符串翻译。请参见该项目的源存储库，以查找可帮助您管理翻译工作流程的工具。</p>
+<p>Translations are collected from the <code>themes/&lt;THEME&gt;/i18n/</code> folder (built into the theme), as well as translations present in <code>i18n/</code> at the root of your project. In the <code>i18n</code>, the translations will be merged and take precedence over what is in the theme folder. Language files should be named according to <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> with names such as <code>en-US.toml</code>, <code>fr.toml</code>, etc.</p>
+<p>从themes/<theme>/i18n/文件夹（内置于主题中）以及位于项目根目录的i18n/文件夹中收集翻译。在i18n中，翻译将合并并优先于主题文件夹中的内容。语言文件应根据RFC 5646命名，例如en-US.toml、fr.toml等。</theme></p>
+<p>Artificial languages with private use subtags as defined in <a href="https://datatracker.ietf.org/doc/html/rfc5646#section-2.2.7">RFC 5646 § 2.2.7</a> are also supported. You may omit the <code>art-x-</code> prefix for brevity. For example:</p>
+<p>RFC 5646§2.2.7中定义的带有私有使用子标记的人工语言也受支持。为简洁起见，您可以省略art-x-前缀。例如：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>art-x-hugolang
+<a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a>hugolang
+</code></pre></div>
+<p>Private use subtags must not exceed 8 alphanumeric characters.</p>
+<p>私有使用子标记不得超过8个字母数字字符。</p>
+<h3 id="_11">查询基本翻译<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
+<p>From within your templates, use the <code>i18n</code> function like this:</p>
+<p>在您的模板中，可以像这样使用<code>i18n</code>函数：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a>{{ i18n "home" }}
+</code></pre></div>
+<p>The function will search for the <code>"home"</code> id:</p>
+<p>该函数将搜索"home"id：</p>
+<p>i18n/en-US.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">yaml</label><label for="__tabbed_7_2">toml</label><label for="__tabbed_7_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nt">home</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-26-2" id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Home</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">[home]</span><span class="w"></span>
+<a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Home'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">   </span><span class="nt">"home"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">      </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Home"</span><span class="w"></span>
+<a href="#__codelineno-28-4" id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-28-5" id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+<p>The result will be</p>
+<p>结果将是</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a>Home
+</code></pre></div>
+<h3 id="_12">查询带有变量的灵活翻译<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
+<p>Often you will want to use the page variables in the translation strings. To do so, pass the <code>.</code> context when calling <code>i18n</code>:</p>
+<p>通常，您会想在翻译字符串中使用页面变量。要这样做，请在调用i18n时传递上下文。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a>{{ i18n "wordCount" . }}
+</code></pre></div>
+<p>The function will pass the <code>.</code> context to the <code>"wordCount"</code> id:</p>
+<p>该函数将把上下文传递给"wordCount"id：</p>
+<p>i18n/en-US.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><input id="__tabbed_8_3" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">yaml</label><label for="__tabbed_8_2">toml</label><label for="__tabbed_8_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-31-1" id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="nt">wordCount</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-31-2" id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This article has {{ .WordCount }} words.</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-32-1" id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">[wordCount]</span><span class="w"></span>
+<a href="#__codelineno-32-2" id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">  </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'This article has {{ .WordCount }} words.'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-33-2" id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">   </span><span class="nt">"wordCount"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-33-3" id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">      </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This article has {{ .WordCount }} words."</span><span class="w"></span>
+<a href="#__codelineno-33-4" id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-33-5" id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Assume <code>.WordCount</code> in the context has value is 101. The result will be:</p>
+<p>假设上下文中的 .WordCount 值为 101。结果将是：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a>This article has 101 words.
+</code></pre></div>
+<h3 id="_13">查询单数/复数翻译<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h3>
+<p>In other to meet singular/plural requirement, you must pass a dictionary (map) with a numeric <code>.Count</code> property to the <code>i18n</code> function. The below example uses <code>.ReadingTime</code> variable which has a built-in <code>.Count</code> property.</p>
+<p>为了满足单数/复数要求，您必须将具有数字 .Count 属性的字典（map）传递给 i18n 函数。下面的示例使用内置的 .ReadingTime 变量，它具有一个 .Count 属性。</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a>{{ i18n "readingTime" .ReadingTime }}
+</code></pre></div>
+<p>The function will read <code>.Count</code> from <code>.ReadingTime</code> and evaluate whether the number is singular (<code>one</code>) or plural (<code>other</code>). After that, it will pass to <code>readingTime</code> id in <code>i18n/en-US.toml</code> file:</p>
+<p>函数将从 .ReadingTime 中读取 .Count 并评估数字是单数（one）还是复数（other）。之后，它将传递给 i18n/en-US.toml 文件中的 readingTime id：</p>
+<p>i18n/en-US.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><input id="__tabbed_9_3" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">yaml</label><label for="__tabbed_9_2">toml</label><label for="__tabbed_9_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="nt">readingTime</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-36-2" id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="w">  </span><span class="nt">one</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">One minute to read</span><span class="w"></span>
+<a href="#__codelineno-36-3" id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="w">  </span><span class="nt">other</span><span class="p">:</span><span class="w"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">.Count</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">minutes</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">read'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="k">[readingTime]</span><span class="w"></span>
+<a href="#__codelineno-37-2" id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="w">  </span><span class="n">one</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'One minute to read'</span><span class="w"></span>
+<a href="#__codelineno-37-3" id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="w">  </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'{{ .Count }} minutes to read'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-38-1" id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-38-2" id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="w">   </span><span class="nt">"readingTime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-38-3" id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="w">      </span><span class="nt">"one"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One minute to read"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-38-4" id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="w">      </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{ .Count }} minutes to read"</span><span class="w"></span>
+<a href="#__codelineno-38-5" id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-38-6" id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Assuming <code>.ReadingTime.Count</code> in the context has value is 525600. The result will be:</p>
+<p>假设上下文中的 .ReadingTime.Count 值为 525600。结果将是：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-39-1" id="__codelineno-39-1" name="__codelineno-39-1"></a>525600 minutes to read
+</code></pre></div>
+<p>If <code>.ReadingTime.Count</code> in the context has value is 1. The result is:</p>
+<p>如果上下文中的 .ReadingTime.Count 值为1。结果是：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-40-1" id="__codelineno-40-1" name="__codelineno-40-1"></a>One minute to read
+</code></pre></div>
+<p>In case you need to pass a custom data: (<code>(dict "Count" numeric_value_only)</code> is minimum requirement)</p>
+<p>如果您需要传递自定义数据：((dict "Count" numeric_value_only) 是最小要求)</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-41-1" id="__codelineno-41-1" name="__codelineno-41-1"></a>{{ i18n "readingTime" (dict "Count" 25 "FirstArgument" true "SecondArgument" false "Etc" "so on, so far") }}
+</code></pre></div>
+<h2 id="_14">本地化<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h2>
+<p>The following localization examples assume your site’s primary language is English, with translations to French and German.</p>
+<p>以下本地化示例假定您站点的主要语言为英语，并提供了法语和德语的翻译。</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><input id="__tabbed_10_3" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">yaml</label><label for="__tabbed_10_2">toml</label><label for="__tabbed_10_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-42-1" id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span><span class="w"></span>
+<a href="#__codelineno-42-2" id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="nt">languages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-42-3" id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="w">  </span><span class="nt">de</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-42-4" id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/de</span><span class="w"></span>
+<a href="#__codelineno-42-5" id="__codelineno-42-5" name="__codelineno-42-5"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deutsch</span><span class="w"></span>
+<a href="#__codelineno-42-6" id="__codelineno-42-6" name="__codelineno-42-6"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<a href="#__codelineno-42-7" id="__codelineno-42-7" name="__codelineno-42-7"></a><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-42-8" id="__codelineno-42-8" name="__codelineno-42-8"></a><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/en</span><span class="w"></span>
+<a href="#__codelineno-42-9" id="__codelineno-42-9" name="__codelineno-42-9"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">English</span><span class="w"></span>
+<a href="#__codelineno-42-10" id="__codelineno-42-10" name="__codelineno-42-10"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<a href="#__codelineno-42-11" id="__codelineno-42-11" name="__codelineno-42-11"></a><span class="w">  </span><span class="nt">fr</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-42-12" id="__codelineno-42-12" name="__codelineno-42-12"></a><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/fr</span><span class="w"></span>
+<a href="#__codelineno-42-13" id="__codelineno-42-13" name="__codelineno-42-13"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Français</span><span class="w"></span>
+<a href="#__codelineno-42-14" id="__codelineno-42-14" name="__codelineno-42-14"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-43-1" id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">defaultContentLanguage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'en'</span><span class="w"></span>
+<a href="#__codelineno-43-2" id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="k">[languages]</span><span class="w"></span>
+<a href="#__codelineno-43-3" id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="w">  </span><span class="k">[languages.de]</span><span class="w"></span>
+<a href="#__codelineno-43-4" id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="w">    </span><span class="n">contentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'content/de'</span><span class="w"></span>
+<a href="#__codelineno-43-5" id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Deutsch'</span><span class="w"></span>
+<a href="#__codelineno-43-6" id="__codelineno-43-6" name="__codelineno-43-6"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a href="#__codelineno-43-7" id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="w">  </span><span class="k">[languages.en]</span><span class="w"></span>
+<a href="#__codelineno-43-8" id="__codelineno-43-8" name="__codelineno-43-8"></a><span class="w">    </span><span class="n">contentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'content/en'</span><span class="w"></span>
+<a href="#__codelineno-43-9" id="__codelineno-43-9" name="__codelineno-43-9"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'English'</span><span class="w"></span>
+<a href="#__codelineno-43-10" id="__codelineno-43-10" name="__codelineno-43-10"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-43-11" id="__codelineno-43-11" name="__codelineno-43-11"></a><span class="w">  </span><span class="k">[languages.fr]</span><span class="w"></span>
+<a href="#__codelineno-43-12" id="__codelineno-43-12" name="__codelineno-43-12"></a><span class="w">    </span><span class="n">contentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'content/fr'</span><span class="w"></span>
+<a href="#__codelineno-43-13" id="__codelineno-43-13" name="__codelineno-43-13"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Français'</span><span class="w"></span>
+<a href="#__codelineno-43-14" id="__codelineno-43-14" name="__codelineno-43-14"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-44-1" id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-44-2" id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="w">   </span><span class="nt">"defaultContentLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-3" id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="w">   </span><span class="nt">"languages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-44-4" id="__codelineno-44-4" name="__codelineno-44-4"></a><span class="w">      </span><span class="nt">"de"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-44-5" id="__codelineno-44-5" name="__codelineno-44-5"></a><span class="w">         </span><span class="nt">"contentDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/de"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-6" id="__codelineno-44-6" name="__codelineno-44-6"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deutsch"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-7" id="__codelineno-44-7" name="__codelineno-44-7"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a href="#__codelineno-44-8" id="__codelineno-44-8" name="__codelineno-44-8"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-44-9" id="__codelineno-44-9" name="__codelineno-44-9"></a><span class="w">      </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-44-10" id="__codelineno-44-10" name="__codelineno-44-10"></a><span class="w">         </span><span class="nt">"contentDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/en"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-11" id="__codelineno-44-11" name="__codelineno-44-11"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-12" id="__codelineno-44-12" name="__codelineno-44-12"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-44-13" id="__codelineno-44-13" name="__codelineno-44-13"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-44-14" id="__codelineno-44-14" name="__codelineno-44-14"></a><span class="w">      </span><span class="nt">"fr"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-44-15" id="__codelineno-44-15" name="__codelineno-44-15"></a><span class="w">         </span><span class="nt">"contentDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/fr"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-16" id="__codelineno-44-16" name="__codelineno-44-16"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Français"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-44-17" id="__codelineno-44-17" name="__codelineno-44-17"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-44-18" id="__codelineno-44-18" name="__codelineno-44-18"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-44-19" id="__codelineno-44-19" name="__codelineno-44-19"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-44-20" id="__codelineno-44-20" name="__codelineno-44-20"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="_15">日期<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h3>
+<p>With this 前置元数据:</p>
+<p>有了这个前置元数据：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><input id="__tabbed_11_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">yaml</label><label for="__tabbed_11_2">toml</label><label for="__tabbed_11_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-45-1" id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021-11-03T12:34:56+01:00</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-46-1" id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2021-11-03T12:34:56+01:00</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-47-1" id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-47-2" id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="w">   </span><span class="nt">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-03T12:34:56+01:00"</span><span class="w"></span>
+<a href="#__codelineno-47-3" id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>And this template code:</p>
+<p>以及这个模板代码：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-48-1" id="__codelineno-48-1" name="__codelineno-48-1"></a>{{ .Date | time.Format ":date_full" }}
+</code></pre></div>
+<p>The rendered page displays:</p>
+<p>渲染的页面显示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">English</td>
+<td align="left">Wednesday, November 3, 2021</td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left">mercredi 3 novembre 2021</td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left">Mittwoch, 3. November 2021</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://gohugo.io/functions/dateformat">time.Format</a> for details.</p>
+<p>​   详细信息请参见<a href="https://gohugo.io/functions/dateformat">time.Format</a>。</p>
+<h3 id="currency">货币 Currency<a class="headerlink" href="#currency" title="Permanent link">⚓︎</a></h3>
+<p>With this template code:</p>
+<p>使用此模板代码：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-49-1" id="__codelineno-49-1" name="__codelineno-49-1"></a>{{ 512.5032 | lang.FormatCurrency 2 "USD" }}
+</code></pre></div>
+<p>The rendered page displays:</p>
+<p>渲染的页面显示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">English</td>
+<td align="left">$512.50</td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left">512,50 $US</td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left">512,50 $</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://gohugo.io/functions/lang">lang.FormatCurrency</a> and <a href="https://gohugo.io/functions/lang">lang.FormatAccounting</a> for details.</p>
+<h3 id="_16">数字<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h3>
+<p>With this template code:</p>
+<p>使用此模板代码：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-50-1" id="__codelineno-50-1" name="__codelineno-50-1"></a>{{ 512.5032 | lang.FormatNumber 2 }}
+</code></pre></div>
+<p>The rendered page displays:</p>
+<p>渲染的页面显示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">English</td>
+<td align="left">512.50</td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left">512,50</td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left">512,50</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://gohugo.io/functions/lang">lang.FormatNumber</a> and <a href="https://gohugo.io/functions/lang">lang.FormatNumberCustom</a> for details.</p>
+<p>请参考lang.FormatNumber和lang.FormatNumberCustom了解详情。</p>
+<h3 id="_17">百分数<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h3>
+<p>With this template code:</p>
+<p>使用此模板代码：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-51-1" id="__codelineno-51-1" name="__codelineno-51-1"></a>{{ 512.5032 | lang.FormatPercent 2 }} ---&gt; 512.50%
+</code></pre></div>
+<p>The rendered page displays:</p>
+<p>渲染的页面显示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">English</td>
+<td align="left">512.50%</td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left">512,50 %</td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left">512,50 %</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://gohugo.io/functions/lang">lang.FormatPercent</a> for details.</p>
+<p>请参考lang.FormatPercent了解详情。</p>
+<h2 id="_18">菜单<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h2>
+<p>Localization of menu entries depends on the how you define them:</p>
+<p>菜单项的本地化取决于定义它们的方式：</p>
+<ul>
+<li>When you define menu entries <a href="https://gohugo.io/content-management/menus/#define-automatically">automatically</a> using the section pages menu, you must use translation tables to localize each entry.</li>
+<li>当您使用部分页面菜单自动定义菜单项时，您必须使用翻译表来本地化每个菜单项。 </li>
+<li>When you define menu entries <a href="https://gohugo.io/content-management/menus/#define-in-front-matter">in 前置元数据</a>, they are already localized based on the 前置元数据 itself. If the 前置元数据 values are insufficient, use translation tables to localize each entry.</li>
+<li>当您在前置matter中定义菜单项时，它们已经基于前置matter本身进行了本地化。如果前置matter值不足，请使用翻译表来本地化每个菜单项。 </li>
+<li>When you define menu entries <a href="https://gohugo.io/content-management/menus/#define-in-site-configuration">in site configuration</a>, you can (a) use translation tables, or (b) create language-specific menu entries under each language key.</li>
+<li>当您在站点配置中定义菜单项时，您可以（a）使用翻译表，或（b）在每个语言键下创建特定于语言的菜单项。 </li>
+</ul>
+<h3 id="_19">使用翻译表<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h3>
+<p>When rendering the text that appears in menu each entry, the <a href="https://gohugo.io/templates/menu-templates/#example">example menu template</a> does this:</p>
+<p>在渲染出现在菜单中的文本时，示例菜单模板执行以下操作：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-52-1" id="__codelineno-52-1" name="__codelineno-52-1"></a>{{ or (T .Identifier) .Name | safeHTML }}
+</code></pre></div>
+<p>It queries the translation table for the current language using the menu entry’s <code>identifier</code> and returns the translated string. If the translation table does not exist, or if the <code>identifier</code> key is not present in the translation table, it falls back to <code>name</code>.</p>
+<p>它使用菜单项的标识符查询当前语言的翻译表，并返回已翻译的字符串。如果翻译表不存在，或者标识符键不在翻译表中，则回退到名称。</p>
+<p>The <code>identifier</code> depends on how you define menu entries:</p>
+<p>标识符取决于您如何定义菜单项：</p>
+<ul>
+<li>If you define the menu entry <a href="https://gohugo.io/content-management/menus/#define-automatically">automatically</a> using the section pages menu, the <code>identifier</code> is the page’s <code>.Section</code>.</li>
+<li>如果您使用部分页面菜单自动定义菜单项，则标识符是页面的.Section。 </li>
+<li>If you define the menu entry <a href="https://gohugo.io/content-management/menus/#define-in-site-configuration">in site configuration</a> or <a href="https://gohugo.io/content-management/menus/#define-in-front-matter">in 前置元数据</a>, set the <code>identifier</code> property to the desired value.</li>
+<li>如果您在站点配置或前置matter中定义菜单项，请将标识符属性设置为所需值。 </li>
+</ul>
+<p>For example, if you define menu entries in site configuration:</p>
+<p>例如，如果您在站点配置中定义菜单项：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><input id="__tabbed_12_3" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">yaml</label><label for="__tabbed_12_2">toml</label><label for="__tabbed_12_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-53-1" id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="nt">menu</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-53-2" id="__codelineno-53-2" name="__codelineno-53-2"></a><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-53-3" id="__codelineno-53-3" name="__codelineno-53-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">products</span><span class="w"></span>
+<a href="#__codelineno-53-4" id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Products</span><span class="w"></span>
+<a href="#__codelineno-53-5" id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="w">    </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/products</span><span class="w"></span>
+<a href="#__codelineno-53-6" id="__codelineno-53-6" name="__codelineno-53-6"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<a href="#__codelineno-53-7" id="__codelineno-53-7" name="__codelineno-53-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">services</span><span class="w"></span>
+<a href="#__codelineno-53-8" id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Services</span><span class="w"></span>
+<a href="#__codelineno-53-9" id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="w">    </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/services</span><span class="w"></span>
+<a href="#__codelineno-53-10" id="__codelineno-53-10" name="__codelineno-53-10"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-54-1" id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="k">[menu]</span><span class="w"></span>
+<a href="#__codelineno-54-2" id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="k">[[menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-54-3" id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="w">  </span><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'products'</span><span class="w"></span>
+<a href="#__codelineno-54-4" id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Products'</span><span class="w"></span>
+<a href="#__codelineno-54-5" id="__codelineno-54-5" name="__codelineno-54-5"></a><span class="w">  </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/products'</span><span class="w"></span>
+<a href="#__codelineno-54-6" id="__codelineno-54-6" name="__codelineno-54-6"></a><span class="w">  </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-54-7" id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="k">[[menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-54-8" id="__codelineno-54-8" name="__codelineno-54-8"></a><span class="w">  </span><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'services'</span><span class="w"></span>
+<a href="#__codelineno-54-9" id="__codelineno-54-9" name="__codelineno-54-9"></a><span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Services'</span><span class="w"></span>
+<a href="#__codelineno-54-10" id="__codelineno-54-10" name="__codelineno-54-10"></a><span class="w">  </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/services'</span><span class="w"></span>
+<a href="#__codelineno-54-11" id="__codelineno-54-11" name="__codelineno-54-11"></a><span class="w">  </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-55-1" id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-55-2" id="__codelineno-55-2" name="__codelineno-55-2"></a><span class="w">   </span><span class="nt">"menu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-55-3" id="__codelineno-55-3" name="__codelineno-55-3"></a><span class="w">      </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-55-4" id="__codelineno-55-4" name="__codelineno-55-4"></a><span class="w">         </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-55-5" id="__codelineno-55-5" name="__codelineno-55-5"></a><span class="w">            </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-6" id="__codelineno-55-6" name="__codelineno-55-6"></a><span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-7" id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="w">            </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-8" id="__codelineno-55-8" name="__codelineno-55-8"></a><span class="w">            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-55-9" id="__codelineno-55-9" name="__codelineno-55-9"></a><span class="w">         </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-55-10" id="__codelineno-55-10" name="__codelineno-55-10"></a><span class="w">         </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-55-11" id="__codelineno-55-11" name="__codelineno-55-11"></a><span class="w">            </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-12" id="__codelineno-55-12" name="__codelineno-55-12"></a><span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-13" id="__codelineno-55-13" name="__codelineno-55-13"></a><span class="w">            </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-55-14" id="__codelineno-55-14" name="__codelineno-55-14"></a><span class="w">            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a href="#__codelineno-55-15" id="__codelineno-55-15" name="__codelineno-55-15"></a><span class="w">         </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-55-16" id="__codelineno-55-16" name="__codelineno-55-16"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-55-17" id="__codelineno-55-17" name="__codelineno-55-17"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-55-18" id="__codelineno-55-18" name="__codelineno-55-18"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Create corresponding entries in the translation tables:</p>
+<p>创建相应的翻译表条目：</p>
+<p>i18n/de.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><input id="__tabbed_13_3" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">yaml</label><label for="__tabbed_13_2">toml</label><label for="__tabbed_13_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-56-1" id="__codelineno-56-1" name="__codelineno-56-1"></a><span class="nt">products</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Produkte</span><span class="w"></span>
+<a href="#__codelineno-56-2" id="__codelineno-56-2" name="__codelineno-56-2"></a><span class="nt">services</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Leistungen</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-57-1" id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="n">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Produkte'</span><span class="w"></span>
+<a href="#__codelineno-57-2" id="__codelineno-57-2" name="__codelineno-57-2"></a><span class="n">services</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Leistungen'</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-58-1" id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-58-2" id="__codelineno-58-2" name="__codelineno-58-2"></a><span class="w">   </span><span class="nt">"products"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Produkte"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-58-3" id="__codelineno-58-3" name="__codelineno-58-3"></a><span class="w">   </span><span class="nt">"services"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leistungen"</span><span class="w"></span>
+<a href="#__codelineno-58-4" id="__codelineno-58-4" name="__codelineno-58-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="_20">创建语言特定的菜单条目<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h3>
+<p>例如：</p>
+<p>config.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><input id="__tabbed_14_3" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">yaml</label><label for="__tabbed_14_2">toml</label><label for="__tabbed_14_3">json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-59-1" id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="nt">languages</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-2" id="__codelineno-59-2" name="__codelineno-59-2"></a><span class="w">  </span><span class="nt">de</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-3" id="__codelineno-59-3" name="__codelineno-59-3"></a><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">de-DE</span><span class="w"></span>
+<a href="#__codelineno-59-4" id="__codelineno-59-4" name="__codelineno-59-4"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deutsch</span><span class="w"></span>
+<a href="#__codelineno-59-5" id="__codelineno-59-5" name="__codelineno-59-5"></a><span class="w">    </span><span class="nt">menu</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-6" id="__codelineno-59-6" name="__codelineno-59-6"></a><span class="w">      </span><span class="nt">main</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-7" id="__codelineno-59-7" name="__codelineno-59-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Produkte</span><span class="w"></span>
+<a href="#__codelineno-59-8" id="__codelineno-59-8" name="__codelineno-59-8"></a><span class="w">        </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/products</span><span class="w"></span>
+<a href="#__codelineno-59-9" id="__codelineno-59-9" name="__codelineno-59-9"></a><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<a href="#__codelineno-59-10" id="__codelineno-59-10" name="__codelineno-59-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Leistungen</span><span class="w"></span>
+<a href="#__codelineno-59-11" id="__codelineno-59-11" name="__codelineno-59-11"></a><span class="w">        </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/services</span><span class="w"></span>
+<a href="#__codelineno-59-12" id="__codelineno-59-12" name="__codelineno-59-12"></a><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"></span>
+<a href="#__codelineno-59-13" id="__codelineno-59-13" name="__codelineno-59-13"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<a href="#__codelineno-59-14" id="__codelineno-59-14" name="__codelineno-59-14"></a><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-15" id="__codelineno-59-15" name="__codelineno-59-15"></a><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-US</span><span class="w"></span>
+<a href="#__codelineno-59-16" id="__codelineno-59-16" name="__codelineno-59-16"></a><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">English</span><span class="w"></span>
+<a href="#__codelineno-59-17" id="__codelineno-59-17" name="__codelineno-59-17"></a><span class="w">    </span><span class="nt">menu</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-18" id="__codelineno-59-18" name="__codelineno-59-18"></a><span class="w">      </span><span class="nt">main</span><span class="p">:</span><span class="w"></span>
+<a href="#__codelineno-59-19" id="__codelineno-59-19" name="__codelineno-59-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Products</span><span class="w"></span>
+<a href="#__codelineno-59-20" id="__codelineno-59-20" name="__codelineno-59-20"></a><span class="w">        </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/products</span><span class="w"></span>
+<a href="#__codelineno-59-21" id="__codelineno-59-21" name="__codelineno-59-21"></a><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<a href="#__codelineno-59-22" id="__codelineno-59-22" name="__codelineno-59-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Services</span><span class="w"></span>
+<a href="#__codelineno-59-23" id="__codelineno-59-23" name="__codelineno-59-23"></a><span class="w">        </span><span class="nt">pageRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/services</span><span class="w"></span>
+<a href="#__codelineno-59-24" id="__codelineno-59-24" name="__codelineno-59-24"></a><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"></span>
+<a href="#__codelineno-59-25" id="__codelineno-59-25" name="__codelineno-59-25"></a><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-60-1" id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="k">[languages]</span><span class="w"></span>
+<a href="#__codelineno-60-2" id="__codelineno-60-2" name="__codelineno-60-2"></a><span class="w">  </span><span class="k">[languages.de]</span><span class="w"></span>
+<a href="#__codelineno-60-3" id="__codelineno-60-3" name="__codelineno-60-3"></a><span class="w">    </span><span class="n">languageCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'de-DE'</span><span class="w"></span>
+<a href="#__codelineno-60-4" id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Deutsch'</span><span class="w"></span>
+<a href="#__codelineno-60-5" id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-60-6" id="__codelineno-60-6" name="__codelineno-60-6"></a><span class="w">    </span><span class="k">[languages.de.menu]</span><span class="w"></span>
+<a href="#__codelineno-60-7" id="__codelineno-60-7" name="__codelineno-60-7"></a><span class="k">[[languages.de.menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-60-8" id="__codelineno-60-8" name="__codelineno-60-8"></a><span class="w">      </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Produkte'</span><span class="w"></span>
+<a href="#__codelineno-60-9" id="__codelineno-60-9" name="__codelineno-60-9"></a><span class="w">      </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/products'</span><span class="w"></span>
+<a href="#__codelineno-60-10" id="__codelineno-60-10" name="__codelineno-60-10"></a><span class="w">      </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-60-11" id="__codelineno-60-11" name="__codelineno-60-11"></a><span class="k">[[languages.de.menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-60-12" id="__codelineno-60-12" name="__codelineno-60-12"></a><span class="w">      </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Leistungen'</span><span class="w"></span>
+<a href="#__codelineno-60-13" id="__codelineno-60-13" name="__codelineno-60-13"></a><span class="w">      </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/services'</span><span class="w"></span>
+<a href="#__codelineno-60-14" id="__codelineno-60-14" name="__codelineno-60-14"></a><span class="w">      </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a href="#__codelineno-60-15" id="__codelineno-60-15" name="__codelineno-60-15"></a><span class="w">  </span><span class="k">[languages.en]</span><span class="w"></span>
+<a href="#__codelineno-60-16" id="__codelineno-60-16" name="__codelineno-60-16"></a><span class="w">    </span><span class="n">languageCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'en-US'</span><span class="w"></span>
+<a href="#__codelineno-60-17" id="__codelineno-60-17" name="__codelineno-60-17"></a><span class="w">    </span><span class="n">languageName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'English'</span><span class="w"></span>
+<a href="#__codelineno-60-18" id="__codelineno-60-18" name="__codelineno-60-18"></a><span class="w">    </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-60-19" id="__codelineno-60-19" name="__codelineno-60-19"></a><span class="w">    </span><span class="k">[languages.en.menu]</span><span class="w"></span>
+<a href="#__codelineno-60-20" id="__codelineno-60-20" name="__codelineno-60-20"></a><span class="k">[[languages.en.menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-60-21" id="__codelineno-60-21" name="__codelineno-60-21"></a><span class="w">      </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Products'</span><span class="w"></span>
+<a href="#__codelineno-60-22" id="__codelineno-60-22" name="__codelineno-60-22"></a><span class="w">      </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/products'</span><span class="w"></span>
+<a href="#__codelineno-60-23" id="__codelineno-60-23" name="__codelineno-60-23"></a><span class="w">      </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-60-24" id="__codelineno-60-24" name="__codelineno-60-24"></a><span class="k">[[languages.en.menu.main]]</span><span class="w"></span>
+<a href="#__codelineno-60-25" id="__codelineno-60-25" name="__codelineno-60-25"></a><span class="w">      </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'Services'</span><span class="w"></span>
+<a href="#__codelineno-60-26" id="__codelineno-60-26" name="__codelineno-60-26"></a><span class="w">      </span><span class="n">pageRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">'/services'</span><span class="w"></span>
+<a href="#__codelineno-60-27" id="__codelineno-60-27" name="__codelineno-60-27"></a><span class="w">      </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-61-1" id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-2" id="__codelineno-61-2" name="__codelineno-61-2"></a><span class="w">   </span><span class="nt">"languages"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-3" id="__codelineno-61-3" name="__codelineno-61-3"></a><span class="w">      </span><span class="nt">"de"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-4" id="__codelineno-61-4" name="__codelineno-61-4"></a><span class="w">         </span><span class="nt">"languageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de-DE"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-5" id="__codelineno-61-5" name="__codelineno-61-5"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deutsch"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-6" id="__codelineno-61-6" name="__codelineno-61-6"></a><span class="w">         </span><span class="nt">"menu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-7" id="__codelineno-61-7" name="__codelineno-61-7"></a><span class="w">            </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-61-8" id="__codelineno-61-8" name="__codelineno-61-8"></a><span class="w">               </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-9" id="__codelineno-61-9" name="__codelineno-61-9"></a><span class="w">                  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Produkte"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-10" id="__codelineno-61-10" name="__codelineno-61-10"></a><span class="w">                  </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-11" id="__codelineno-61-11" name="__codelineno-61-11"></a><span class="w">                  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-61-12" id="__codelineno-61-12" name="__codelineno-61-12"></a><span class="w">               </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-61-13" id="__codelineno-61-13" name="__codelineno-61-13"></a><span class="w">               </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-14" id="__codelineno-61-14" name="__codelineno-61-14"></a><span class="w">                  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leistungen"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-15" id="__codelineno-61-15" name="__codelineno-61-15"></a><span class="w">                  </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-16" id="__codelineno-61-16" name="__codelineno-61-16"></a><span class="w">                  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a href="#__codelineno-61-17" id="__codelineno-61-17" name="__codelineno-61-17"></a><span class="w">               </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-61-18" id="__codelineno-61-18" name="__codelineno-61-18"></a><span class="w">            </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-61-19" id="__codelineno-61-19" name="__codelineno-61-19"></a><span class="w">         </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-61-20" id="__codelineno-61-20" name="__codelineno-61-20"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a href="#__codelineno-61-21" id="__codelineno-61-21" name="__codelineno-61-21"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-61-22" id="__codelineno-61-22" name="__codelineno-61-22"></a><span class="w">      </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-23" id="__codelineno-61-23" name="__codelineno-61-23"></a><span class="w">         </span><span class="nt">"languageCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-US"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-24" id="__codelineno-61-24" name="__codelineno-61-24"></a><span class="w">         </span><span class="nt">"languageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-25" id="__codelineno-61-25" name="__codelineno-61-25"></a><span class="w">         </span><span class="nt">"menu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-26" id="__codelineno-61-26" name="__codelineno-61-26"></a><span class="w">            </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a href="#__codelineno-61-27" id="__codelineno-61-27" name="__codelineno-61-27"></a><span class="w">               </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-28" id="__codelineno-61-28" name="__codelineno-61-28"></a><span class="w">                  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-29" id="__codelineno-61-29" name="__codelineno-61-29"></a><span class="w">                  </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/products"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-30" id="__codelineno-61-30" name="__codelineno-61-30"></a><span class="w">                  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<a href="#__codelineno-61-31" id="__codelineno-61-31" name="__codelineno-61-31"></a><span class="w">               </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-61-32" id="__codelineno-61-32" name="__codelineno-61-32"></a><span class="w">               </span><span class="p">{</span><span class="w"></span>
+<a href="#__codelineno-61-33" id="__codelineno-61-33" name="__codelineno-61-33"></a><span class="w">                  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-34" id="__codelineno-61-34" name="__codelineno-61-34"></a><span class="w">                  </span><span class="nt">"pageRef"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/services"</span><span class="p">,</span><span class="w"></span>
+<a href="#__codelineno-61-35" id="__codelineno-61-35" name="__codelineno-61-35"></a><span class="w">                  </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a href="#__codelineno-61-36" id="__codelineno-61-36" name="__codelineno-61-36"></a><span class="w">               </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-61-37" id="__codelineno-61-37" name="__codelineno-61-37"></a><span class="w">            </span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-61-38" id="__codelineno-61-38" name="__codelineno-61-38"></a><span class="w">         </span><span class="p">},</span><span class="w"></span>
+<a href="#__codelineno-61-39" id="__codelineno-61-39" name="__codelineno-61-39"></a><span class="w">         </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<a href="#__codelineno-61-40" id="__codelineno-61-40" name="__codelineno-61-40"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-61-41" id="__codelineno-61-41" name="__codelineno-61-41"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-61-42" id="__codelineno-61-42" name="__codelineno-61-42"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>For a simple menu with two languages, these menu entries are easy to create and maintain. For a larger menu, or with more than two languages, using translation tables as described above is preferable.</p>
+<p>对于只包含两种语言的简单菜单，这些菜单条目易于创建和维护。对于更大的菜单或包含两种以上语言的菜单，最好使用上述描述的翻译表。</p>
+<h2 id="_21">缺少翻译<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h2>
+<p>If a string does not have a translation for the current language, Hugo will use the value from the default language. If no default value is set, an empty string will be shown.</p>
+<p>如果一个字符串在当前语言下没有翻译，Hugo 将使用默认语言的值。如果没有设置默认值，则显示为空字符串。</p>
+<p>While translating a Hugo website, it can be handy to have a visual indicator of missing translations. The <a href="https://gohugo.io/getting-started/configuration/"><code>enableMissingTranslationPlaceholders</code> configuration option</a> will flag all untranslated strings with the placeholder <code>[i18n] identifier</code>, where <code>identifier</code> is the id of the missing translation.</p>
+<p>在翻译 Hugo 站点时，有一个缺少翻译的可视化指示器会很方便。启用 enableMissingTranslationPlaceholders 配置选项会使用 [i18n] 占位符标记所有未翻译的字符串，其中 identifier 是缺失翻译的 id。</p>
+<p>Hugo will generate your website with these missing translation placeholders. It might not be suitable for production environments.</p>
+<p>Hugo 将生成带有这些缺失翻译占位符的站点。这可能不适合生产环境。</p>
+<p>For merging of content from other languages (i.e. missing content translations), see <a href="https://gohugo.io/functions/lang.merge/">lang.Merge</a>.</p>
+<p>要合并其他语言的内容（即缺失的内容翻译），请参阅 lang.Merge。</p>
+<p>To track down missing translation strings, run Hugo with the <code>--printI18nWarnings</code> flag:</p>
+<p>要追踪缺失的翻译字符串，请使用 --printI18nWarnings 标志运行 Hugo：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-62-1" id="__codelineno-62-1" name="__codelineno-62-1"></a>hugo --printI18nWarnings <span class="p">|</span> grep i18n
+<a href="#__codelineno-62-2" id="__codelineno-62-2" name="__codelineno-62-2"></a>i18n<span class="p">|</span>MISSING_TRANSLATION<span class="p">|</span>en<span class="p">|</span>wordCount
+</code></pre></div>
+<h2 id="_22">多语言主题支持<a class="headerlink" href="#_22" title="Permanent link">⚓︎</a></h2>
+<p>To support Multilingual mode in your themes, some considerations must be taken for the URLs in the templates. If there is more than one language, URLs must meet the following criteria:</p>
+<p>要在主题中支持多语言模式，必须在模板中考虑 URL。如果有多种语言，则 URL 必须符合以下标准：</p>
+<ul>
+<li>Come from the built-in <code>.Permalink</code> or <code>.RelPermalink</code></li>
+<li>来自内置的 .Permalink 或 .RelPermalink </li>
+<li>Be constructed with the <a href="https://gohugo.io/functions/rellangurl"><code>relLangURL</code> template function</a> or the <a href="https://gohugo.io/functions/abslangurl"><code>absLangURL</code> template function</a> <strong>OR</strong> be prefixed with <code>{{ .LanguagePrefix }}</code></li>
+<li>使用 relLangURL 模板函数或 absLangURL 模板函数构造 URL，或在 URL 前加上 {{.LanguagePrefix}} </li>
+</ul>
+<p>If there is more than one language defined, the <code>LanguagePrefix</code> variable will equal <code>/en</code> (or whatever your <code>CurrentLanguage</code> is). If not enabled, it will be an empty string (and is therefore harmless for single-language Hugo websites).</p>
+<p>如果定义了多种语言，则 LanguagePrefix 变量将等于 /en（或您的 CurrentLanguage），如果未启用，则为空字符串（对于单语言 Hugo 站点是无害的）。</p>
+<h2 id="hugo-new">使用 <code>hugo new</code> 生成多语言内容<a class="headerlink" href="#hugo-new" title="Permanent link">⚓︎</a></h2>
+<p>If you organize content with translations in the same directory:</p>
+<p>如果您将内容与翻译组织在同一个目录中：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-63-1" id="__codelineno-63-1" name="__codelineno-63-1"></a>hugo new post/test.en.md
+<a href="#__codelineno-63-2" id="__codelineno-63-2" name="__codelineno-63-2"></a>hugo new post/test.de.md
+</code></pre></div>
+<p>If you organize content with translations in different directories:</p>
+<p>如果您将翻译后的内容组织在不同的目录中：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-64-1" id="__codelineno-64-1" name="__codelineno-64-1"></a>hugo new content/en/post/test.md
+<a href="#__codelineno-64-2" id="__codelineno-64-2" name="__codelineno-64-2"></a>hugo new content/de/post/test.md
+</code></pre></div>
+<h2 id="_23">另请参阅<a class="headerlink" href="#_23" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li><a href="https://gohugo.io/functions/i18n/">i18n</a></li>
+<li><a href="https://gohugo.io/functions/abslangurl/">absLangURL</a></li>
+<li><a href="https://gohugo.io/functions/rellangurl/">relLangURL</a></li>
+<li><a href="https://gohugo.io/functions/uniq/">uniq</a></li>
+<li><a href="https://gohugo.io/news/0.65.0-relnotes/">0.65.0: Hugo Reloaded!</a></li>
+</ul>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 评论" class="md-footer__link md-footer__link--prev" href="../Comments/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              评论
+            </div>
+</div>
+</a>
+<a aria-label="Next: 语法高亮" class="md-footer__link md-footer__link--next" href="../SyntaxHighlighting/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              语法高亮
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "content.tabs.link", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="../../javascripts/tex-mml-chtml.js"></script>
+<script src="../../javascripts/deal-zero-width-space.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>

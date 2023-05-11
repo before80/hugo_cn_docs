@@ -1,0 +1,358 @@
+.md-grid {
+    max-width: 120rem;
+}
+
+.md-typeset p.caption { 
+    text-align: center; 
+    font-size: 0.94em; 
+    color: rgb(128, 128, 128, 0.8); 
+    margin: -0.7em 0 0; 
+}
+
+
+body[data-md-color-scheme="slate"] .md-typeset p.caption { 
+    text-align: center; 
+    font-size: 0.94em; 
+    color: rgba(226, 224, 224, 0.8); 
+    margin: -0.7em 0 0; 
+}
+
+body[data-md-color-scheme="slate"] .md-typeset :is(.tip,.hint,.important)>:is(.admonition-title,summary) {
+    background-color: rgba(0,191,165,.8);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset :is(.warning,.caution,.attention)>:is(.admonition-title,summary) {
+    background-color: rgba(255,145,0,.8);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset :is(.question,.help,.faq)>:is(.admonition-title,summary) {
+    background-color: rgba(100,221,23,.8);
+}
+
+body[data-md-color-scheme="slate"] .md-typeset :is(.note)>:is(.admonition-title,summary) {
+    background-color: rgba(68,138,255,.8);
+}
+
+@media only screen and (max-width: 1220px) {
+    body .md-grid {
+      max-width: 100% !important;
+      width: 100% !important;    
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body .md-content {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+body .md-content {
+    max-width: calc(100% - 420px);
+}
+
+.md-nav__link:is(:focus, :hover) {
+    color: #64dd17;
+}
+.md-nav__link--active {
+    color: #cd00ff !important;
+    font-weight: bold;
+}
+li > code,p > code,h2 > code,h3 > code, h4 > code {
+    color: darkorange !important;
+    background-color: transparent !important;
+}
+p > a {
+    color: #cd00ff !important;
+    font-weight: bold;
+    font-size: 1.1em !important;
+}
+mjx-container {
+    font-size: 100% !important;
+}
+::-webkit-scrollbar {   
+    /*滚动条整体样式*/
+    /* width: 10px; */
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 15px !important;
+}
+
+
+/* .red, .red-important { color: red !important; }
+
+.darkred, .darkred-important { color: darkred !important; }
+
+.orangered, .orangered-important { color: orangered !important; }
+
+.green, .green-important { color: green !important; }
+
+.limegreen, .limegreen-important { color: limegreen !important; }
+
+.cyan, .cyan-important { color: cyan !important; }
+
+.darkcyan, .darkcyan-important { color: darkcyan !important; }
+
+:root { --md-text-font: Roboto; --md-code-font: Roboto Mono; } */
+
+/* .md-typeset #references, .md-typeset .no-underline { margin-bottom: 0; padding-bottom: 0; border: none; }
+.md-typeset h2 { padding-bottom: 0.2em; border-bottom: 1px solid #d3d3d3; }
+.md-typeset h3 { padding-bottom: 0.2em; border-bottom: 1px dashed #d3d3d3; }
+.md-typeset h4 { font-size: 1.17em; }
+.md-typeset h5 { font-size: 1.08em; }
+.md-typeset h6 { font-size: 1em; }
+.md-typeset dt { font-weight: bold; }
+.md-typeset img { display: block; margin-left: auto; margin-right: auto; }
+.md-typeset .img-inline { display: inline-block; vertical-align: text-bottom; }
+.md-typeset .img-border { border: 1px solid black; }
+.md-typeset kbd { box-shadow: 0 0 0 0.05rem var(--md-default-fg-color--lighter), 0 0.1rem 0 var(--md-default-fg-color--lighter), inset 0 -0.1rem 0.2rem var(--md-default-bg-color); }
+.md-typeset .admonition, .md-typeset details { font-size: 0.9em; }
+.md-typeset .md-typeset__table { display: block; margin-left: auto; margin-right: auto; }
+.md-typeset .md-typeset__table > table { display: table; width: auto; margin: 0 auto; }
+
+.md-typeset .footnote hr { margin-top: 0.2em; } */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  /* font-family: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; */
+  font-weight: bold;
+  color: #351D35;
+  z-index: 2;
+}
+
+body[data-md-color-scheme="slate"] .md-typeset h1,
+body[data-md-color-scheme="slate"] .md-typeset h2,
+body[data-md-color-scheme="slate"] .md-typeset h3,
+body[data-md-color-scheme="slate"] .md-typeset h4,
+body[data-md-color-scheme="slate"] .md-typeset h5,
+body[data-md-color-scheme="slate"] .md-typeset h6 {
+  /* font-family: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; */
+  font-weight: bold;
+  color: #3d88c9;
+  z-index: 2;
+}
+
+.md-typeset h1 {
+  text-align: center;
+  font-size: 2.25rem;
+}
+.md-typeset h2 {
+  position: relative;
+  margin: 1rem 1.25rem;
+  padding: 3rem 0 1rem;
+  outline: none;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  font-size: 2rem;
+}
+.md-typeset h2::before {
+  background: rgba(255, 166, 17, 0.55);
+}
+.md-typeset h2::before,
+.md-typeset h2::after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0%;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 166, 17, 0.55);
+  border-radius: 50%;
+  content: '';
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+.md-typeset h2::after {
+  width: 90px;
+  height: 90px;
+  border-width: 8px;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+.md-typeset h2:hover::before,
+.md-typeset h2:hover::after,
+.md-typeset h2:focus::before,
+.md-typeset h2:focus::after {
+  opacity: 1;
+  border-color: rgba(255, 166, 17, 0.95);
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.md-typeset h3 {
+  position: relative;
+  outline: none;
+  padding: 1.5rem 2rem 1rem;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1.75rem;
+}
+.md-typeset h3::before,
+.md-typeset h3::after {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 75%;
+  height: 2px;
+  background: #0F1A3A;
+  content: '';
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s, height 0.3s;
+  -moz-transition: opacity 0.3s, height 0.3s;
+  transition: opacity 0.3s, height 0.3s;
+}
+.md-typeset h3::after {
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.md-typeset h3:hover,
+.md-typeset h3:focus {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.md-typeset h3:hover::before,
+.md-typeset h3:hover::after,
+.md-typeset h3:focus::before,
+.md-typeset h3:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.md-typeset h3:hover::before,
+.md-typeset h3:focus::before {
+  height: 8px;
+}
+.md-typeset h4 {
+  position: relative;
+  font-size: 1.5rem;
+}
+.md-typeset h4::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 0;
+  height: 100%;
+  border-bottom: 2px solid #C09A21;
+  color: #C09A21;
+  /* content: attr(id); */
+  -webkit-transition: max-width ease-in-out 1s;
+  -moz-transition: max-width ease-in-out 1s;
+  transition: max-width ease-in-out 1s;
+}
+.md-typeset h4:hover::after,
+.md-typeset h4:focus::after {
+  max-width: 100%;
+}
+.md-typeset h5 {
+  position: relative;
+  font-size: 1.25rem;
+}
+.md-typeset h6 {
+  position: relative;
+  padding-left: 2rem;
+}
+.md-typeset h6::before {
+  position: absolute;
+  top: 8px;
+  left: 0.5rem;
+  color: #F9FCFF;
+  background: #0F1A3A;
+  content: '\36';
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
+  /* font-family: 'FontAwesome'; */
+}
+.md-typeset h1 {
+  counter-reset: cnt_h2 0 cnt_h3 0 cnt_h4 0 cnt_h5 0;
+}
+.md-typeset h2 {
+  counter-reset: cnt_h3 0 cnt_h4 0 cnt_h5 0;
+  counter-increment: cnt_h2;
+}
+.md-typeset h2:before {
+  content: counter(cnt_h2) " ";
+}
+.md-typeset h3 {
+  counter-reset: cnt_h4 0 cnt_h5 0;
+  counter-increment: cnt_h3;
+}
+.md-typeset h3::before {
+  content: counter(cnt_h2) "." counter(cnt_h3) " ";
+}
+.md-typeset h4 {
+  counter-reset: cnt_h5;
+  counter-increment: cnt_h4;
+}
+.md-typeset h4::before {
+  content: counter(cnt_h2) "." counter(cnt_h3) "." counter(cnt_h4) " ";
+}
+.md-typeset h5 {
+  counter-increment: cnt_h5;
+}
+.md-typeset h5::before {
+  content: counter(cnt_h2) "-" counter(cnt_h3) "-" counter(cnt_h4) "-" counter(cnt_h5) " ";
+}
+.md-typeset h2::before,
+.md-typeset h3::before,
+.md-typeset h4::before,
+.md-typeset h5::before {
+  /* font-family: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif; */
+  font-style: italic;
+  font-size: 4rem;
+  /* color: #ccc7ce; */
+  color: rgb(204, 199, 206, 0.2);  
+}
+
+body[data-md-color-scheme="slate"] .md-typeset h2::before,
+body[data-md-color-scheme="slate"] .md-typeset h3::before,
+body[data-md-color-scheme="slate"] .md-typeset h4::before,
+body[data-md-color-scheme="slate"] .md-typeset h5::before {
+  /* font-family: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif; */
+  /* font-style: italic; */
+  /* font-size: 4rem; */
+  color: rgb(204, 199, 206, 0.1);  
+}
+
+.md-typeset h4::before,
+.md-typeset h5::before {
+  font-size: 2rem;
+  position: absolute;
+  left: -1rem;
+  top: -1.5rem;
+  z-index: -1;
+}
+.md-typeset h2:hover::before,
+.md-typeset h3:hover::before,
+.md-typeset h4:hover::before,
+.md-typeset h5:hover::before {
+  color: rgba(15, 26, 58, 0.3);
+  z-index: -1;
+}
+.md-typeset p {
+  font-size: 1.2rem;
+}
